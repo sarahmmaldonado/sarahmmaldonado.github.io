@@ -42,14 +42,79 @@
     <!-- Navigation Bar -->
     <div class="navbar">
         <a href="#home">Home</a>
-        <a href="#Experience">About</a>
-        <a href="#Portfolio">Services</a>
+        <a href="#Experience">Experience</a>
+        <a href="#Portfolio">Portfolio</a>
     </div>
 
     <!-- Page content -->
+    <title>Styled Heading</title>
+    <style>
+        .content {
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            font-family: 'Arial', sans-serif;
+            font-size: 48px;
+            color: #333;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
     <div class="content">
-        <h1>Sarah Maldonado</h1>
-        <p></p>
+        <h1>Sarah<br>Maldonado</h1>
+        <p>This is a placeholder paragraph where you can add more information.</p>
+    </div>
+
+</body>
+</html>
+What This Does:
+The <br> tag creates a line break between "Sarah" and "Maldonado," making "Maldonado" appear on the next line within the same <h1> tag.
+Option 2: Using Two Separate <span> Elements (for More Styling Control)
+If you want more control over the styling of each word, you can use two <span> elements inside the <h1> tag and style them individually:
+
+html
+Copy code
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styled Heading</title>
+    <style>
+        .content {
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            font-family: 'Roboto', sans-serif;
+            font-size: 48px;
+            color: #333;
+            font-weight: bold;
+            line-height: 1.2; /* Adjusts spacing between lines */
+        }
+
+        .first-name {
+            display: block;
+        }
+
+        .last-name {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="content">
+        <h1>
+            <span class="first-name">Sarah</span>
+            <span class="last-name">Maldonado</span>
+        </h1>
+        <p>This is a placeholder paragraph where you can add more information.</p>
     </div>
 
 </body>
