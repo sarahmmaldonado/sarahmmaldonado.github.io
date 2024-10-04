@@ -12,7 +12,7 @@
             display: flex; /* Flexbox for layout */
             justify-content: space-between; /* Space between name and links */
             align-items: center; /* Vertically center items */
-            padding: 3px 20px; /* Adds padding inside the navbar */
+            padding: 10px 20px; /* Adds padding inside the navbar */
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Adds shadow to bottom */
         }
 
@@ -37,7 +37,7 @@
         .navbar .nav-links a:hover {
             background-color: #eed8ee; /* Light background on hover */
             color: rgb(112, 105, 112); /* Dark text on hover */
-            text-decoration: underline; /* adds underline on links on hover */
+            text-decoration: underline; /* Adds underline on links on hover */
         }
 
         /* Body style */
@@ -46,28 +46,25 @@
             margin: 0; /* Removes default margin */
             font-family: 'Garamond', serif; /* Default font for the page */
             line-height: 2; /* Double space the body text */
-            display: flex; /* Use flexbox for the body */
         }
 
-        /* Left section for image */
-        .image-section {
-            flex: 1; /* Allow this section to take up available space */
-            display: flex; /* Align items within this section */
-            justify-content: center; /* Center image horizontally */
-            align-items: center; /* Center image vertically */
-            padding: 20px; /* Add padding */
+        /* Content container to align image and text horizontally */
+        .content {
+            display: flex; /* Align image and text horizontally */
+            align-items: center; /* Vertically align image and text */
+            margin-top: 20px; /* Adds space below the navbar */
+            padding: 20px; /* Padding around the content */
         }
 
         /* Image style */
-        .image-section img {
+        .content img {
             width: 150px; /* Set image width */
             height: 150px; /* Set image height */
+            margin-right: 20px; /* Space between image and text */
         }
 
-        /* Right section for text */
-        .text-section {
-            flex: 2; /* Allow this section to take up more space than the image section */
-            padding: 20px; /* Add padding */
+        /* Text container for proper alignment */
+        .text-container {
             text-align: left; /* Align text to the left */
         }
 
@@ -103,15 +100,16 @@
         </div>
     </div>
 
-    <!-- Main content area -->
-    <div class="image-section">
+    <!-- Content section with image on the left and text on the right -->
+    <div class="content">
         <!-- Add your image here -->
         <img src="Screenshot 2024-10-04 at 5.33.30 PM.png" alt="Profile Picture">
-    </div>
 
-    <div class="text-section">
-        <h1>Welcome, I'm Sarah!</h1>
-        <p>This is a placeholder paragraph where you can add more information.</p>
+        <!-- Page content -->
+        <div class="text-container">
+            <h1>Welcome, I'm Sarah!</h1>
+            <p>This is a placeholder paragraph where you can add more information.</p>
+        </div>
     </div>
 
 </body>
