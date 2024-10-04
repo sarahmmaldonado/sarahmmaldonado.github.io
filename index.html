@@ -47,13 +47,12 @@
             font-family: 'Garamond', serif; /* Default font for the page */
             line-height: 2; /* Double space the body text */
         }
-
-        /* Content style */
-        .content {
+ /* Content container to align image and text horizontally */
+ .content {
             display: flex; /* Align image and text horizontally */
             align-items: center; /* Vertically align image and text */
             margin-top: 50px; /* Adds space below the navbar */
-            padding: 10px; /* Padding around the content */
+            padding: 20px; /* Padding around the content */
             justify-content: flex-start; /* Align items to the left */
         }
 
@@ -61,9 +60,14 @@
         .content img {
             width: 150px; /* Set image width */
             height: 150px; /* Set image height */
-            margin-right: 20px; /* Adds space between image and text */
-            margin-left: 0; /* Optional: Adjust if you want more space from the left */
-         }
+            margin-right: 20px; /* Space between image and text */
+            border-radius: 50%; /* Optional: Makes the image circular */
+        }
+
+        /* Text container for proper alignment */
+        .text-container {
+            text-align: left; /* Align text to the left */
+        }
         /* Heading style */
         h1 {
             font-family: 'Garamond', serif; /* Font for heading */
