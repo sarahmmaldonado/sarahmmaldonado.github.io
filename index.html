@@ -46,28 +46,29 @@
             margin: 0; /* Removes default margin */
             font-family: 'Garamond', serif; /* Default font for the page */
             line-height: 2; /* Double space the body text */
+            display: flex; /* Use flexbox for the body */
         }
 
-        /* Content container to align image and text horizontally */
-        .content {
-            display: flex; /* Align image and text horizontally */
-            align-items: center; /* Vertically align image and text */
-            margin-top: 50px; /* Adds space below the navbar */
-            padding: 20px; /* Padding around the content */
-            justify-content: flex-end; /* Align items to the right */
+        /* Left section for image */
+        .image-section {
+            flex: 1; /* Allow this section to take up available space */
+            display: flex; /* Align items within this section */
+            justify-content: center; /* Center image horizontally */
+            align-items: center; /* Center image vertically */
+            padding: 20px; /* Add padding */
         }
 
         /* Image style */
-        .content img {
-            width: 300px; /* Set image width */
-            height: 350px; /* Set image height */
-            margin-right: 20px; /* Space between image and text */
+        .image-section img {
+            width: 150px; /* Set image width */
+            height: 150px; /* Set image height */
         }
 
-        /* Text container for proper alignment */
-        .text-container {
+        /* Right section for text */
+        .text-section {
+            flex: 2; /* Allow this section to take up more space than the image section */
+            padding: 20px; /* Add padding */
             text-align: left; /* Align text to the left */
-            max-width: 400px; /* Set a max-width for the text container */
         }
 
         /* Heading style */
@@ -102,20 +103,20 @@
         </div>
     </div>
 
-    <!-- Content section with image on the left and text on the right -->
-    <div class="content">
+    <!-- Main content area -->
+    <div class="image-section">
         <!-- Add your image here -->
         <img src="Screenshot 2024-10-04 at 5.33.30 PM.png" alt="Profile Picture">
+    </div>
 
-        <!-- Text content container -->
-        <div class="text-container">
-            <h1>Welcome, I'm Sarah!</h1>
-            <p>This is a placeholder paragraph where you can add more information.</p>
-        </div>
+    <div class="text-section">
+        <h1>Welcome, I'm Sarah!</h1>
+        <p>This is a placeholder paragraph where you can add more information.</p>
     </div>
 
 </body>
 </html>
+
 
 
 
