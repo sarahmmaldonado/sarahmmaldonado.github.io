@@ -91,14 +91,15 @@
         }
 
         /* Dropdown styles */
-        .dropdown {
+         /* Dropdown styles */
+         .dropdown {
+            width: 100%; /* Full width */
+            background-color: #eed8ee; /* Match the navbar color */
             position: relative; /* Position relative for absolute children */
-            display: inline-block; /* Align dropdown inline */
-            margin-top: 0px; /* Space above dropdown */
-            margin-left: 130px; /* Moves dropdown to the right */
-        }
+            padding: 10px 0; /* Padding around dropdown */
+         }
 
-        .dropdown-button {
+         .dropdown-button {
             background-color: #e7e7e7; /* Button background color */
             color: rgb(42, 40, 42); /* Button text color */
             padding: 10px 15px; /* Padding around button */
@@ -106,6 +107,7 @@
             border-radius: 5px; /* Rounded corners */
             cursor: pointer; /* Pointer cursor on hover */
             font-size: 18px; /* Font size */
+            width: 100%; /* Full width */
         }
 
         .dropdown-button:hover {
@@ -114,16 +116,16 @@
 
         .dropdown-content {
             display: none; /* Initially hide dropdown content */
-            position: absolute; /* Position below button */
             background-color: #f9f9f9; /* Dropdown content background */
-            min-width: 160px; /* Minimum width */
+            padding: 10px; /* Padding for dropdown content */
             box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* Shadow for dropdown */
             z-index: 1; /* Ensure it appears above other content */
         }
 
+
         .dropdown-content p {
-            margin: 10px; /* Space for each paragraph inside dropdown */
-            padding: 10px; /* Padding for dropdown items */
+            margin: 10px 0; /* Space for each paragraph inside dropdown */
+            padding: 5px; /* Padding for dropdown items */
         }
 
         .dropdown-content a {
