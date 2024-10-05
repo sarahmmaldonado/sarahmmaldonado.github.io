@@ -89,6 +89,36 @@
             margin: 0; /* Removes default margin */
             margin-bottom: 30px;
         }
+         /* Accordion styles */
+         .accordion {
+            background-color: #f9f9f9; /* Background color */
+            border: 1px solid #ddd; /* Border for the accordion */
+            border-radius: 5px; /* Rounded corners */
+            margin-top: 20px; /* Space above accordion */
+        }
+
+        .accordion-header {
+            padding: 10px; /* Padding inside header */
+            cursor: pointer; /* Cursor changes to pointer on hover */
+            font-size: 20px; /* Header font size */
+            font-weight: bold; /* Bold header */
+            background-color: #e7e7e7; /* Background color of header */
+            border-bottom: 1px solid #ddd; /* Border below header */
+        }
+
+        .accordion-content {
+            padding: 15px; /* Padding inside content */
+            display: none; /* Initially hide content */
+            overflow: hidden; /* Hide overflow */
+            background-color: #fff; /* Content background color */
+        }
+
+        .accordion-content p {
+            margin: 5px 0; /* Spacing for paragraphs inside content */
+        }
+    </style>
+</head>
+<body>
     </style>
 </head>
 <body>
@@ -127,6 +157,18 @@
         <p>LinkedIn: <a href="https://www.linkedin.com/in/sarah-maldonado-549571291/" target="_blank">yourprofile</a></p>
     </div>
 </div>
+<script>
+    // Get the accordion header
+    const accordionHeader = document.querySelector('.accordion-header');
+    
+    // Add click event listener
+    accordionHeader.addEventListener('click', function() {
+        // Toggle the display of the accordion content
+        const accordionContent = document.querySelector('.accordion-content');
+        accordionContent.style.display = accordionContent.style.display === 'block' ? 'none' : 'block';
+    });
+</script>
+
 </body>
 </html>
 
