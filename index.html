@@ -89,33 +89,50 @@
             margin: 0; /* Removes default margin */
             margin-bottom: 30px;
         }
-         /* Accordion styles */
-         .accordion {
-            background-color: #f9f9f9; /* Background color */
-            border: 1px solid #ddd; /* Border for the accordion */
-            border-radius: 5px; /* Rounded corners */
-            margin-top: 20px; /* Space above accordion */
-        }
+       /* Dropdown styles */
+.dropdown {
+    position: relative; /* Position relative for absolute children */
+    display: inline-block; /* Align dropdown inline */
+    margin-top: 20px; /* Space above dropdown */
+}
 
-        .accordion-header {
-            padding: 10px; /* Padding inside header */
-            cursor: pointer; /* Cursor changes to pointer on hover */
-            font-size: 20px; /* Header font size */
-            font-weight: bold; /* Bold header */
-            background-color: #e7e7e7; /* Background color of header */
-            border-bottom: 1px solid #ddd; /* Border below header */
-        }
+.dropdown-button {
+    background-color: #e7e7e7; /* Button background color */
+    color: rgb(42, 40, 42); /* Button text color */
+    padding: 10px 15px; /* Padding around button */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 18px; /* Font size */
+}
 
-        .accordion-content {
-            padding: 15px; /* Padding inside content */
-            display: none; /* Initially hide content */
-            overflow: hidden; /* Hide overflow */
-            background-color: #fff; /* Content background color */
-        }
+.dropdown-button:hover {
+    background-color: #d1d1d1; /* Change background color on hover */
+}
 
-        .accordion-content p {
-            margin: 5px 0; /* Spacing for paragraphs inside content */
-        }
+.dropdown-content {
+    display: none; /* Initially hide dropdown content */
+    position: absolute; /* Position below button */
+    background-color: #f9f9f9; /* Dropdown content background */
+    min-width: 160px; /* Minimum width */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* Shadow for dropdown */
+    z-index: 1; /* Ensure it appears above other content */
+}
+
+.dropdown-content p {
+    margin: 10px; /* Space for each paragraph inside dropdown */
+    padding: 10px; /* Padding for dropdown items */
+}
+
+.dropdown-content a {
+    color: rgb(42, 40, 42); /* Link color */
+    text-decoration: none; /* Remove underline from links */
+}
+
+.dropdown-content a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
     </style>
 </head>
 <body>
@@ -149,25 +166,30 @@
             </p>
         </div>
     </div>
-    <!-- Accordion Menu for Contact Me -->
-    <div class="accordion">
-        <h2 class="accordion-header">Contact Me</h2>
-    <div class="accordion-content">
-        <p>Email: saramaldo03@gmail.com</p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/sarah-maldonado-549571291/" target="_blank">sarah-maldonado</a></p>
-    </div>
-</div>
-<script>
-    // Get the accordion header
-    const accordionHeader = document.querySelector('.accordion-header');
+    <script>
+        // Get the dropdown button
+        const dropdownButton = document.querySelector('.dropdown-button');
     
-    // Add click event listener
-    accordionHeader.addEventListener('click', function() {
-        // Toggle the display of the accordion content
-        const accordionContent = document.querySelector('.accordion-content');
-        accordionContent.style.display = accordionContent.style.display === 'block' ? 'none' : 'block';
-    });
-</script>
+        // Add click event listener
+        dropdownButton.addEventListener('click', function() {
+            const dropdownContent = document.querySelector('.dropdown-content');
+            dropdownContent.style.display = dropdownContent.style.display === 'block' ? 'none' : 'block';
+        });
+    
+        // Optional: Close dropdown if user clicks outside of it
+        window.addEventListener('click', function(event) {
+            if (!event.target.matches('.dropdown-button')) {
+                const dropdowns = document.getElementsByClassName("dropdown-content");
+                for (let i = 0; i < dropdowns.length; i++) {
+                    const openDropdown = dropdowns[i];
+                    if (openDropdown.style.display === 'block') {
+                        openDropdown.style.display = 'none';
+                    }
+                }
+            }
+        });
+    </script>
+    
 
 </body>
 </html>
