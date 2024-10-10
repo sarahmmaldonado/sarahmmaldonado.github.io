@@ -127,6 +127,7 @@
             width: 200px; /* Fixed width for dropdown */
             left: 50%; /* Center align */
             transform: translateX(-50%); /* Center it properly */
+            bottom: 50px; /* Adjust the position to open upwards */
         }
 
         .dropdown-content p {
@@ -204,12 +205,16 @@
         window.addEventListener('click', function(event) {
             if (!event.target.matches('.dropdown-button')) {
                 const dropdowns = document.getElementsByClassName("dropdown-content");
-                for (let i = 0; i < dropdowns.length;
-
+                for (let i = 0; i < dropdowns.length; i++) {
+                    dropdowns[i].style.display = 'none';
+                }
+            }
+        });
     </script>
 
 </body>
 </html>
+
 
 
 
