@@ -14,7 +14,6 @@
             align-items: center; /* Vertically center items */
             padding: 10px 20px; /* Adds padding inside the navbar */
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Adds shadow to bottom */
-            position: relative; /* Set relative positioning */
         }
 
         /* Style for the name on the left */
@@ -55,6 +54,7 @@
             align-items: center; /* Vertically align image and text */
             margin-top: 100px; /* Adds space below the navbar */
             padding: 50px 30px; /* Padding around the content */
+            margin-bottom: 100px; /* Adds space below the content */
         }
 
         /* Image style */
@@ -94,10 +94,7 @@
 
         /* Dropdown styles */
         .dropdown {
-            background-color: #eed8ee; /* Match the navbar color */
-            position: absolute; /* Keep it above other content */
-            top: 10px; /* Position it within the navbar */
-            right: 20px; /* Align it to the right */
+            position: relative; /* Position relative to allow absolute positioning of dropdown content */
         }
 
         .dropdown-button {
@@ -109,10 +106,7 @@
             cursor: pointer; /* Pointer cursor on hover */
             font-size: 18px; /* Font size */
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow */
-        }
-
-        .dropdown-button:hover {
-            background-color: #e7cbe7; /* Change background color on hover */
+            margin-left: auto; /* Push the button to the right */
         }
 
         .dropdown-content {
@@ -123,8 +117,8 @@
             z-index: 1; /* Ensure it appears above other content */
             position: absolute; /* Position it absolutely */
             bottom: 100%; /* Align the bottom of the dropdown to the top of the button */
-            left: 0; /* Align it to the left */
-            width: 100%; /* Full width */
+            right: 0; /* Align it to the right */
+            width: 200px; /* Fixed width for dropdown */
         }
 
         .dropdown-content p {
@@ -206,9 +200,6 @@
 
 </body>
 </html>
-
-
-
 
 
 
