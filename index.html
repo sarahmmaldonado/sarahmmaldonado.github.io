@@ -70,17 +70,17 @@
         .card {
             background-color: #fff; /* White background for the card effect */
             border-radius: 8px; /* Rounded corners */
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Shadow for the card */
             padding: 20px; /* Padding around the card */
             margin-bottom: 30px; /* Space below card */
             text-align: center; /* Center align text inside the card */
             transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Default shadow for the card */
         }
 
         /* Card hover effect */
         .card:hover {
             transform: translateY(-5px); /* Slightly lift the card on hover */
-            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15); /* More pronounced shadow on hover */
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15); /* More pronounced shadow on hover */
         }
 
         /* Heading style */
@@ -208,9 +208,21 @@
             // Toggle display of dropdown content
             dropdownContent.style.display = dropdownContent.style.display === 'block' ? 'none' : 'block';
         });
+
+        // Optional: Close dropdown if user clicks outside of it
+        window.addEventListener('click', function(event) {
+            if (!event.target.matches('.dropdown-button')) {
+                const dropdowns = document.getElementsByClassName("dropdown-content");
+                for (let i = 0; i < dropdowns.length; i++) {
+                    dropdowns[i].style.display = 'none';
+                }
+            }
+        });
     </script>
+
 </body>
 </html>
+
 
 
 
