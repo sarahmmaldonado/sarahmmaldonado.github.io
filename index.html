@@ -90,23 +90,23 @@
         .paragraph-container {
             position: relative; /* For positioning the expanded box */
             transition: all 0.3s ease; /* Smooth transition for hover effect */
-            padding: 15px; /* Padding around the paragraph box */
-            border: 2px solid transparent; /* Initial transparent border */
+            padding: 20px; /* Padding around the paragraph box */
+            background-color: #fff; /* White background for the card effect */
             border-radius: 8px; /* Rounded corners */
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Stronger shadow for the card */
+            margin-bottom: 30px; /* Space below paragraph box */
         }
 
         /* Paragraph style */
         p {
             font-size: 20px; /* Style the paragraph */
             margin: 0; /* Removes default margin */
-            margin-bottom: 30px; /* Space below paragraph */
         }
 
         /* Hover effect for the paragraph box */
         .paragraph-container:hover {
-            border-color: #eed8ee; /* Color on hover */
-            background-color: rgba(237, 216, 238, 0.3); /* Light background on hover */
-            transform: scale(1.05); /* Slightly scale the box */
+            transform: translateY(-5px); /* Slightly lift the box on hover */
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15); /* More pronounced shadow on hover */
         }
 
         /* Dropdown styles */
@@ -231,7 +231,5 @@
 
 </body>
 </html>
-
-
 
 
