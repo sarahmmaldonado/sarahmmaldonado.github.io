@@ -59,23 +59,11 @@
             padding-top: 60px; /* Adds padding to prevent content from being hidden behind the navbar */
         }
 
-        /* Page heading style */
-        h1 {
-            font-family: 'Garamond', serif; /* Font for heading */
-            font-size: 32px; /* Font size */
-            color: #333; /* Text color */
-            font-weight: bold; /* Bold text */
-            margin: 0; /* Removes extra margin */
-            margin-bottom: 40px; /* Space below heading */
-            text-align: center; /* Center the heading */
-            margin-top: 60px; /* Move the heading down */
-        }
-
         /* Content container to align image and text horizontally */
         .content {
             display: flex; /* Align image and text horizontally */
             align-items: flex-start; /* Align items at the start */
-            margin-top: 60px; /* Increased space below the heading */
+            margin-top: 60px; /* Space below the content */
             padding: 20px; /* Padding around the content */
             justify-content: center; /* Center the content */
             width: 100%; /* Full width for content */
@@ -94,18 +82,29 @@
         .card {
             background-color: #fff; /* White background for the card effect */
             border-radius: 8px; /* Rounded corners */
-            padding: 15px; /* Padding around the card */
+            padding: 30px; /* Increased padding around the card */
             margin-bottom: 20px; /* Space below card */
             flex-grow: 1; /* Allows the card to take remaining space */
-            text-align: left; /* Left align text inside the card */
+            text-align: center; /* Center align text inside the card */
             transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Default shadow for the card */
+            width: 400px; /* Fixed width for the card */
         }
 
         /* Card hover effect */
         .card:hover {
             transform: translateY(-5px); /* Slightly lift the card on hover */
             box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15); /* More pronounced shadow on hover */
+        }
+
+        /* Page heading style */
+        h1 {
+            font-family: 'Garamond', serif; /* Font for heading */
+            font-size: 28px; /* Font size */
+            color: #333; /* Text color */
+            font-weight: bold; /* Bold text */
+            margin: 0; /* Removes extra margin */
+            margin-bottom: 20px; /* Space below heading */
         }
 
         /* Paragraph style */
@@ -189,15 +188,13 @@
             </div>
         </div>
 
-        <!-- Page heading -->
-        <h1>Welcome, I'm Sarah!</h1>
-
         <!-- Content section with image on the left and text on the right -->
         <div class="content">
             <img src="Screenshot 2024-10-04 at 5.33.30 PM.png" alt="Profile Picture">
             <div class="card">
+                <h1>Welcome, I'm Sarah!</h1> <!-- Moved heading inside card -->
                 <p>As a motivated undergraduate student at Florida State University pursuing a degree in Information Technology, I am driven by my passion for problem-solving and learning. I thrive in collaborative environments and excel at thinking creatively.</p>
-                <p>I am looking for a position that will allow me to enhance my skills and explore my interest in UX design. I believe that understanding user needs is crucial to creating meaningful experiences, and I am eager to apply my analytical abilities to improve the usability and accessibility of digital products.</p>
+                <p>I am looking for a position that will allow me to enhance my skills and explore my interest in UX design, applying my analytical abilities to improve the usability and accessibility of digital products.</p>
             </div>
         </div>
     </div>
@@ -225,6 +222,7 @@
 
 </body>
 </html>
+
 
 
 
