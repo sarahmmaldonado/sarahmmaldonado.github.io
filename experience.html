@@ -71,19 +71,21 @@
 
         /* Card Styles */
         .card {
-            background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: #fff; /* White background */
+            border: 1px solid #e0e0e0; /* Light border */
+            border-radius: 12px; /* More rounded corners */
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
             width: 95%; /* Card takes 95% of the screen width */
             max-width: 1200px; /* Max width for larger screens */
-            padding: 30px;
+            padding: 20px; /* Reduced padding for a compact look */
             margin-bottom: 20px; /* Spacing between cards */
-            transition: transform 0.3s ease; /* Smooth transition for scaling */
+            transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for scaling and shadow */
             position: relative; /* For positioning the inner content */
         }
 
         .card:hover {
             transform: scale(1.05); /* Slightly enlarge card on hover */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
             z-index: 1; /* Bring hovered card above others */
         }
 
@@ -91,13 +93,16 @@
             font-family: 'Roboto', sans-serif;
             font-size: 26px;
             color: #333;
-            margin-bottom: 10px;
+            margin: 10px 0; /* Margin adjusted for balance */
+            background-color: #f5f5f5; /* Light grey background for header */
+            padding: 10px; /* Padding for the header */
+            border-radius: 8px; /* Rounded corners for header */
         }
 
         .card p {
             font-size: 18px; /* Increased font size */
             color: #444; /* Darker text color for better contrast */
-            margin-bottom: 15px;
+            margin: 15px 0; /* Adjusted margin */
             line-height: 1.6; /* Increased line height for better readability */
             padding: 10px; /* Added padding around paragraphs */
             text-align: left; /* Left-align text for better reading */
@@ -106,6 +111,7 @@
         .card .date {
             font-size: 16px;
             color: #888;
+            margin-top: 10px; /* Added margin for spacing */
         }
     </style>
 </head>
@@ -127,7 +133,7 @@
     <!-- Page Content -->
     <div class="content">
         <h1>Experience</h1>
-       
+        <p>Here are some of the professional experiences I've had:</p>
 
         <!-- Card Container -->
         <div class="card-container">
@@ -149,4 +155,3 @@
 
 </body>
 </html>
-
