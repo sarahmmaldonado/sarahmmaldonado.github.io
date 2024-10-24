@@ -86,11 +86,27 @@
             padding: 10px; /* Padding around heading */
         }
 
+        /* Paragraph container style */
+        .paragraph-container {
+            position: relative; /* For positioning the expanded box */
+            transition: all 0.3s ease; /* Smooth transition for hover effect */
+            padding: 15px; /* Padding around the paragraph box */
+            border: 2px solid transparent; /* Initial transparent border */
+            border-radius: 8px; /* Rounded corners */
+        }
+
         /* Paragraph style */
         p {
             font-size: 20px; /* Style the paragraph */
             margin: 0; /* Removes default margin */
             margin-bottom: 30px; /* Space below paragraph */
+        }
+
+        /* Hover effect for the paragraph box */
+        .paragraph-container:hover {
+            border-color: #eed8ee; /* Color on hover */
+            background-color: rgba(237, 216, 238, 0.3); /* Light background on hover */
+            transform: scale(1.05); /* Slightly scale the box */
         }
 
         /* Dropdown styles */
@@ -174,9 +190,11 @@
             <!-- Page content -->
             <div class="text-container">
                 <h1>Welcome, I'm Sarah!</h1>
-                <p>As a motivated undergraduate student at Florida State University pursuing a degree in Information Technology, I am driven by my passion for problem-solving and learning. I thrive in collaborative environments and excel at thinking creatively.
-                  <br>I am looking for a position that will allow me to enhance my skills and explore my interest in UX design. I believe that understanding user needs is crucial to creating meaningful experiences, and I am eager to apply my analytical abilities to improve the usability and accessibility of digital products.</br>
-                </p>
+                <div class="paragraph-container">
+                    <p>As a motivated undergraduate student at Florida State University pursuing a degree in Information Technology, I am driven by my passion for problem-solving and learning. I thrive in collaborative environments and excel at thinking creatively.
+                      <br>I am looking for a position that will allow me to enhance my skills and explore my interest in UX design. I believe that understanding user needs is crucial to creating meaningful experiences, and I am eager to apply my analytical abilities to improve the usability and accessibility of digital products.</br>
+                    </p>
+                </div>
             </div>
         </div>
     </div>
@@ -213,11 +231,6 @@
 
 </body>
 </html>
-
-
-
-
-
 
 
 
