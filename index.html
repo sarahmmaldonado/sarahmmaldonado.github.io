@@ -8,7 +8,6 @@
         /* Style for the navigation bar */
         .navbar {
             background-color: #eed8ee; /* Light background */
-            overflow: hidden; /* Clears floating content */
             display: flex; /* Flexbox for layout */
             justify-content: space-between; /* Space between name and links */
             align-items: center; /* Vertically center items */
@@ -25,6 +24,10 @@
         }
 
         /* Style for the links on the right */
+        .navbar .nav-links {
+            margin-left: auto; /* Push the links to the right */
+        }
+
         .navbar .nav-links a {
             color: rgb(42, 40, 42); /* Text color for links */
             text-align: center;
@@ -72,6 +75,22 @@
             flex-direction: column; /* Align items in a column */
             align-items: flex-start; /* Align items to the start */
             margin-left: 20px; /* Add left margin to the text container for extra space */
+        }
+
+        /* Card style */
+        .card {
+            background-color: #ffffff; /* White background for card */
+            padding: 20px; /* Padding inside the card */
+            border-radius: 10px; /* Rounded corners */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Initial box shadow */
+            transition: all 0.3s ease; /* Smooth transition for effects */
+            margin-bottom: 30px; /* Space below the card */
+        }
+
+        /* Card hover effect */
+        .card:hover {
+            transform: scale(1.05); /* Slightly enlarge the card on hover */
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
         }
 
         /* Heading style */
@@ -147,71 +166,60 @@
         .wrapper {
             padding-bottom: 80px; /* Space at the bottom for the Contact bar */
         }
-
     </style>
 </head>
 <body>
-
-    <!-- Wrapper to prevent content being cut off by the dropdown -->
-    <div class="wrapper">
-        <!-- Navigation Bar -->
-        <div class="navbar">
-            <!-- Name on the left -->
-            <div class="name">Sarah Maldonado</div>
-
-            <!-- Links on the right -->
-            <div class="nav-links">
-                <a href="index.html">Home</a>
-                <a href="experience.html">Experience</a>
-                <a href="portfolio.html">Portfolio</a>
-            </div>
+    <div class="navbar">
+        <div class="name">Sarah Maldonado</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="experience.html">Experience</a>
+            <a href="portfolio.html">Portfolio</a>
         </div>
+    </div>
 
-        <!-- Content section with image on the left and text on the right -->
+    <div class="wrapper">
         <div class="content">
-            <img src="Screenshot 2024-10-04 at 5.33.30 PM.png" alt="Profile Picture">
-
-            <!-- Page content -->
+            <img src="your-image.jpg" alt="Sarah Maldonado">
             <div class="text-container">
-                <h1>Welcome, I'm Sarah!</h1>
-                <p>As a motivated undergraduate student at Florida State University pursuing a degree in Information Technology, I am driven by my passion for problem-solving and learning. I thrive in collaborative environments and excel at thinking creatively.
-                  <br>I am looking for a position that will allow me to enhance my skills and explore my interest in UX design. I believe that understanding user needs is crucial to creating meaningful experiences, and I am eager to apply my analytical abilities to improve the usability and accessibility of digital products.</br>
-                </p>
+                <div class="card">
+                    <h1>Welcome, I'm Sarah!</h1>
+                    <p>
+                        As a motivated undergraduate student at Florida State University pursuing a degree in Information Technology, I am driven by my passion for problem-solving and learning. I thrive in collaborative environments and excel at thinking creatively.
+                        <br>I am looking for a position that will allow me to enhance my skills and explore my interest in UX design. I believe that understanding user needs is crucial to creating meaningful experiences, and I am eager to apply my analytical abilities to improve the usability and accessibility of digital products.
+                    </p>
+                </div>
             </div>
         </div>
     </div>
 
-    <!-- Dropdown Menu for Contact Me -->
     <div class="dropdown">
         <button class="dropdown-button">Contact Me</button>
         <div class="dropdown-content">
-            <p>Email: <a href="mailto:sarahmaldonado2003@gmail.com">sarahmaldonado2003@gmail.com</a></p>
-            <p>LinkedIn: <a href="https://www.linkedin.com/in/sarah-maldonado-549571291/" target="_blank">Sarah Maldonado</a></p>
+            <p>Email: sarah@example.com</p>
+            <p>Phone: (123) 456-7890</p>
+            <a href="mailto:sarah@example.com">Email me</a>
         </div>
     </div>
 
     <script>
-        // Get the dropdown button
+        // JavaScript for dropdown
         const dropdownButton = document.querySelector('.dropdown-button');
+        const dropdownContent = document.querySelector('.dropdown-content');
 
-        // Add click event listener
-        dropdownButton.addEventListener('click', function() {
-            const dropdownContent = document.querySelector('.dropdown-content');
+        dropdownButton.addEventListener('click', () => {
             dropdownContent.style.display = dropdownContent.style.display === 'block' ? 'none' : 'block';
         });
 
-        // Optional: Close dropdown if user clicks outside of it
-        window.addEventListener('click', function(event) {
-            if (!event.target.matches('.dropdown-button')) {
-                const dropdowns = document.getElementsByClassName("dropdown-content");
-                for (let i = 0; i < dropdowns.length; i++) {
-                    dropdowns[i].style.display = 'none';
-                }
+        // Close the dropdown if clicked outside of it
+        window.addEventListener('click', (event) => {
+            if (!dropdownButton.contains(event.target) && !dropdownContent.contains(event.target)) {
+                dropdownContent.style.display = 'none';
             }
         });
     </script>
-
 </body>
 </html>
+
 
 
