@@ -72,12 +72,19 @@
         /* Card Styles */
         .card {
             background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
             width: 95%; /* Card takes 95% of the screen width */
             max-width: 1200px; /* Max width for larger screens */
             padding: 30px;
             margin-bottom: 20px; /* Spacing between cards */
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+
+        /* Add hover effect to make cards pop */
+        .card:hover {
+            transform: scale(1.03); /* Slightly enlarges the card */
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Adds deeper shadow on hover */
         }
 
         .card h2 {
@@ -98,7 +105,55 @@
             color: #888;
         }
 
+        /* Interactive button */
+        .card button {
+            background-color: #eed8ee;
+            color: #333;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        /* Button hover effect */
+        .card button:hover {
+            background-color: #dcb0d9;
+        }
+
+        /* Collapsible section for details */
+        .details {
+            display: none;
+            margin-top: 10px;
+        }
+
+        /* Expandable feature to show more details */
+        .show-more {
+            display: block;
+            margin-top: 10px;
+            text-align: center;
+            color: #888;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .show-more:hover {
+            color: #555;
+        }
     </style>
+    <script>
+        /* Function to toggle the collapsible details */
+        function toggleDetails(element) {
+            const details = element.previousElementSibling;
+            if (details.style.display === "none" || details.style.display === "") {
+                details.style.display = "block";
+                element.innerText = "Show less";
+            } else {
+                details.style.display = "none";
+                element.innerText = "Show more";
+            }
+        }
+    </script>
 </head>
 <body>
 
@@ -125,19 +180,27 @@
             <!-- First Experience Card -->
             <div class="card">
                 <h2>Playa Bowls - Cashier/Server</h2>
-                <p>My time at Playa Bowls as a cashier and server taught me the importance of teamwork and communication, especially in an environment where everyone needed to be on the same page to ensure orders were expedited correctly. Thanks to the strong collaboration within our team, I was able to quickly adapt to the fast-paced nature of the job. I was frequently recognized for my ability to get orders out quickly while paying close attention to the small details that made each customer’s experience better. Over time, I significantly improved my multitasking skills, managing payments, taking orders, and preparing food simultaneously. This experience also sharpened my problem-solving and time-management abilities, as I often had to find efficient ways to juggle multiple tasks, like balancing customer service and making bowls during busy shifts. Whether it was handling long lines during rush hours or managing last-minute changes to customer orders, I learned how to stay calm under pressure and find quick solutions to keep everything running smoothly. Interacting with customers also helped me build stronger communication skills, from helping customers navigate the menu to addressing any concerns they had. Beyond the day-to-day tasks, I learned the importance of maintaining a positive attitude even during the busiest moments, as this had a direct impact on both the team and the customer experience. My time at Playa Bowls taught me how crucial it is to create an environment where everyone feels supported, which ultimately leads to better service and more satisfied customers. These experiences not only made me more adaptable and efficient, but they also gave me a deeper understanding of how to contribute meaningfully in a fast-paced team environment.</p>
                 <div class="date">September 2019 - March 2020</div>
+                <p>My time at Playa Bowls as a cashier and server taught me the importance of teamwork and communication.</p>
+                <div class="details">
+                    <p>I learned how to stay calm under pressure, multitask efficiently, and deliver excellent customer service.</p>
+                </div>
+                <span class="show-more" onclick="toggleDetails(this)">Show more</span>
             </div>
 
             <!-- Second Experience Card -->
             <div class="card">
-                <h2>Pincho - Cashier/Sever - April 2022</h2>
-                <p>During my time working at Pincho, a small restaurant chain in South Florida, I learned many valuable lessons that let me succeed not only in the restaurant business but also in my everyday life. Being my first job, I faced challenges in the beginning as I adjusted to a fast-paced and high-pressure environment. However, being awarded employee of the month for my ability to exceed sales targets, demonstrate leadership, and maintain smooth operations during busy shifts proved to me that I am able to adapt to these kinds of stressful environments quickly. Being promoted to Employee Trainer taught me how to take a leadership position and aid people into succeeding in their own roles. I specifically remember an experience that greatly impacted me where over the course of a few weeks I encouraged my trainee to break out of her shell and make a lasting impression on both customers and other peers in the workplace. From my time at Pincho, I took many lessons that I have carried with me in both my professional and personal life. I learned how to thrive in high-pressure environments, improving my ability to stay calm and focused while multitasking. My role asan Employee Trainer taught me the value of leadership and how empowering others can lead to collective success. The experience also strengthened my communication skills, as I learned how to effectively listen to and understand the needs of both customers and the people that I worked with. Most importantly, I realized the importance of adaptability and resilience, skills that continue to serve me to this day, whether it's in a professional setting or personal challenges. This job gave me a strong foundation in teamwork, responsibility, and the ability to turn challenges into opportunities for growth.
-                </p>
+                <h2>Pincho - Cashier/Server</h2>
                 <div class="date">April 2022 - August 2022</div>
+                <p>During my time at Pincho, I honed my leadership skills and learned how to thrive in high-pressure environments.</p>
+                <div class="details">
+                    <p>As an Employee Trainer, I guided new team members, helping them succeed while also developing my own leadership skills.</p>
+                </div>
+                <span class="show-more" onclick="toggleDetails(this)">Show more</span>
             </div>
         </div>
     </div>
 
 </body>
 </html>
+
