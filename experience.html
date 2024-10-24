@@ -5,9 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resume Experience</title>
     <style>
+        /* General Styles */
+        body {
+            background-color: #f7edf6; /* Light pink background */
+            margin: 0; /* Removes default margin */
+            font-family: 'Arial', sans-serif; /* Default font for the page */
+        }
+
         /* Style for the navigation bar */
         .navbar {
-            background-color: #eed8ee; /* Dark background */
+            background-color: #eed8ee; /* Light purple background */
             overflow: hidden; /* Clears floating content */
             display: flex; /* Flexbox for layout */
             justify-content: space-between; /* Space between name and links */
@@ -19,13 +26,13 @@
         .navbar .name {
             font-family: 'Playfair Display', serif;
             font-size: 24px;
-            color: rgb(42, 40, 42); /* White text color */
+            color: rgb(42, 40, 42); /* Dark text color */
             font-weight: bold;
         }
 
         /* Style for the links on the right */
         .navbar .nav-links a {
-            color: rgb(42, 40, 42);; /* White text for links */
+            color: rgb(42, 40, 42); /* Dark text for links */
             text-align: center;
             padding: 14px 20px; /* Spacing around each link */
             text-decoration: none; /* Removes underline from links */
@@ -36,6 +43,91 @@
         .navbar .nav-links a:hover {
             background-color: #eed8ee; /* Light background on hover */
             color: rgb(112, 105, 112); /* Dark text on hover */
+        }
+
+        /* Style for the page content */
+        .content {
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            font-family: 'Roboto', sans-serif;
+            font-size: 48px;
+            color: #333;
+            font-weight: bold;
+            line-height: 1.2; /* Adjusts spacing between lines */
+        }
+
+        .timeline {
+            position: relative;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px 0;
+        }
+
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background-color: #eed8ee; /* Purple vertical line */
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3px;
+        }
+
+        .timeline-item {
+            padding: 20px 30px;
+            position: relative;
+            background-color: inherit;
+            width: 50%;
+        }
+
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            right: -13px;
+            background-color: white;
+            border: 4px solid #eed8ee;
+            top: 15px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        .left {
+            left: 0;
+        }
+
+        .right {
+            left: 50%;
+        }
+
+        .timeline-item-content {
+            padding: 20px;
+            background-color: white;
+            position: relative;
+            border-radius: 6px;
+        }
+
+        .timeline-item-content h2 {
+            font-family: 'Roboto', sans-serif;
+            font-size: 20px;
+            color: #333;
+        }
+
+        .timeline-item-content p {
+            margin: 10px 0;
+            font-size: 16px;
+            color: #555;
+        }
+
+        .timeline-item-content .date {
+            font-size: 14px;
+            color: #888;
+            margin-top: 10px;
         }
     </style>
 </head>
@@ -53,48 +145,42 @@
             <a href="portfolio.html">Portfolio</a>
         </div>
     </div>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Styled Heading</title>
-    <style>
-          body {
-            background-color: #f7edf6; /* Light pink background */
-            margin: 0; /* Removes default margin */
-            font-family: 'Arial', sans-serif; /* Default font for the page */
-        }
-        .content {
-            text-align: center;
-            padding: 20px;
-        }
 
-        h1 {
-            font-family: 'Roboto', sans-serif;
-            font-size: 48px;
-            color: #333;
-            font-weight: bold;
-            line-height: 1.2; /* Adjusts spacing between lines */
-        }
-
-        .first-name {
-            display: block;
-        }
-
-        .last-name {
-            display: block;
-        }
-    </style>
-</head>
-<body>
-
+    <!-- Page Content -->
     <div class="content">
-        <h1> Experience</h1>
-        <p>This is a placeholder paragraph where you can add more information.</p>
+        <h1>Experience</h1>
+        <p>Here are some of the professional experiences I've had:</p>
+
+        <!-- Timeline -->
+        <div class="timeline">
+            <!-- First experience -->
+            <div class="timeline-item left">
+                <div class="timeline-item-content">
+                    <h2>UX Design Intern - Company A</h2>
+                    <p>Worked on improving user interface designs and conducting user research to enhance the overall user experience.</p>
+                    <div class="date">June 2023 - August 2023</div>
+                </div>
+            </div>
+
+            <!-- Second experience -->
+            <div class="timeline-item right">
+                <div class="timeline-item-content">
+                    <h2>Web Developer - Company B</h2>
+                    <p>Developed and maintained the company website, ensuring optimal performance and cross-browser compatibility.</p>
+                    <div class="date">January 2022 - May 2023</div>
+                </div>
+            </div>
+
+            <!-- Third experience -->
+            <div class="timeline-item left">
+                <div class="timeline-item-content">
+                    <h2>IT Support Assistant - Company C</h2>
+                    <p>Provided technical support to staff, resolved hardware and software issues, and managed network systems.</p>
+                    <div class="date">August 2021 - December 2021</div>
+                </div>
+            </div>
+        </div>
     </div>
 
 </body>
-</html>
-
 </html>
