@@ -45,6 +45,7 @@
             background-color: #faf8fa;
             margin: 0;
             font-family: 'Arial', sans-serif;
+            overflow: hidden; /* Prevents scrollbars when hovering over cards */
         }
 
         .content {
@@ -67,6 +68,8 @@
             gap: 20px;
             justify-content: center;
             padding: 20px;
+            position: relative; /* Allows inner cards to be positioned relative to this */
+            z-index: 1; /* Keeps the main card container below the hover effect */
         }
 
         .card {
@@ -98,14 +101,16 @@
             background-color: #fff;
             border: 1px solid #ccc;
             border-radius: 8px;
-            width: 150px; /* Smaller card width */
-            height: 100px; /* Smaller card height */
-            transition: transform 0.3s; /* Smooth transition for scaling */
+            width: 400px; /* Increased width of smaller card */
+            height: 300px; /* Increased height of smaller card */
+            transition: transform 0.3s, z-index 0.3s; /* Smooth transition for scaling */
             overflow: hidden; /* Ensures the content doesn't overflow */
+            position: relative; /* Allows z-index to work */
+            z-index: 1; /* Keeps smaller cards below hover effect */
         }
 
         .inner-card:hover {
-            transform: scale(1.2); /* Enlarge on hover */
+            transform: scale(5); /* Enlarge on hover to cover most of the screen */
             z-index: 10; /* Bring hovered card to the front */
         }
 
@@ -185,7 +190,7 @@
                 </div>
                 <div class="inner-card">
                     <div class="embed-container">
-                        <iframe src="YourPowerPointURL2" frameborder="0" allowfullscreen="true"></iframe>
+                        <iframe src="IDS 3493 Final Project Paper - Team Athma.pdf" frameborder="0" allowfullscreen="true"></iframe>
                     </div>
                 </div>
             </div>
@@ -231,5 +236,7 @@
 
 </body>
 </html>
+
+
 
 
