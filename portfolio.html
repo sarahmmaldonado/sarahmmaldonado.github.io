@@ -7,64 +7,44 @@
     <style>
         /* Style for the navigation bar */
         .navbar {
-            background-color: #eed8ee; /* Dark background */
-            overflow: hidden; /* Clears floating content */
-            display: flex; /* Flexbox for layout */
-            justify-content: space-between; /* Space between name and links */
-            align-items: center; /* Vertically center items */
-            padding: 10px 20px; /* Adds padding inside the navbar */
+            background-color: #faf8fa;
+            overflow: hidden;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
         }
 
         /* Style for the name on the left */
         .navbar .name {
             font-family: 'Playfair Display', serif;
             font-size: 24px;
-            color: rgb(42, 40, 42); /* White text color */
+            color: rgb(42, 40, 42);
             font-weight: bold;
         }
 
         /* Style for the links on the right */
         .navbar .nav-links a {
-            color: rgb(42, 40, 42);; /* White text for links */
+            color: rgb(42, 40, 42);
             text-align: center;
-            padding: 14px 20px; /* Spacing around each link */
-            text-decoration: none; /* Removes underline from links */
+            padding: 14px 20px;
+            text-decoration: none;
             display: inline-block;
         }
 
         /* Hover effect for links */
         .navbar .nav-links a:hover {
-            background-color: #eed8ee; /* Light background on hover */
-            color: rgb(112, 105, 112); /* Dark text on hover */
+            background-color: #eed8ee;
+            color: rgb(112, 105, 112);
         }
-    </style>
-</head>
-<body>
 
-    <!-- Navigation Bar -->
-    <div class="navbar">
-        <!-- Name on the left -->
-        <div class="name">Sarah Maldonado</div>
-
-        <!-- Links on the right -->
-        <div class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="experience.html">Experience</a>
-            <a href="portfolio.html">Portfolio</a>
-        </div>
-    </div>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Styled Heading</title>
-    <style>
-          body {
-            background-color: #f7edf6; /* Light pink background */
-            margin: 0; /* Removes default margin */
-            font-family: 'Arial', sans-serif; /* Default font for the page */
+        /* Basic page styling */
+        body {
+            background-color: #f7edf6;
+            margin: 0;
+            font-family: 'Arial', sans-serif;
         }
+
         .content {
             text-align: center;
             padding: 20px;
@@ -75,26 +55,120 @@
             font-size: 48px;
             color: #333;
             font-weight: bold;
-            line-height: 1.2; /* Adjusts spacing between lines */
+            line-height: 1.2;
         }
 
-        .first-name {
-            display: block;
+        /* Card container and card styling */
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            padding: 20px;
         }
 
-        .last-name {
-            display: block;
+        .card {
+            background-color: #f8f9fa;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            width: calc(50% - 10px);
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .card h3 {
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .embed-container {
+            width: 100%;
+            height: 300px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            overflow: hidden;
+            border-radius: 8px;
+        }
+
+        .embed-container iframe {
+            width: 100%;
+            height: 100%;
+        }
+
+        .button {
+            padding: 8px 16px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 14px;
+            text-align: center;
+        }
+
+        .button:hover {
+            background-color: #0056b3;
         }
     </style>
 </head>
 <body>
 
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <div class="name">Sarah Maldonado</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="experience.html">Experience</a>
+            <a href="portfolio.html">Portfolio</a>
+        </div>
+    </div>
+
+    <!-- Content Section -->
     <div class="content">
-        <h1> Portfolio</h1>
+        <h1>Portfolio</h1>
         <p>This is a placeholder paragraph where you can add more information.</p>
     </div>
 
-</body>
-</html>
+    <!-- Card Container with Embedded Files -->
+    <div class="card-container">
+        <!-- Card 1 -->
+        <div class="card">
+            <h3>Presentation 1</h3>
+            <div class="embed-container">
+                <iframe src="YourPowerPointURL1" frameborder="0"></iframe>
+            </div>
+            <a href="YourPowerPointURL1" class="button" target="_blank">Open File</a>
+        </div>
 
+        <!-- Card 2 -->
+        <div class="card">
+            <h3>Presentation 2</h3>
+            <div class="embed-container">
+                <iframe src="YourPowerPointURL2" frameborder="0"></iframe>
+            </div>
+            <a href="YourPowerPointURL2" class="button" target="_blank">Open File</a>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="card">
+            <h3>PDF Document</h3>
+            <div class="embed-container">
+                <iframe src="YourPDFURL" frameborder="0"></iframe>
+            </div>
+            <a href="YourPDFURL" class="button" target="_blank">Open File</a>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="card">
+            <h3>Video File</h3>
+            <div class="embed-container">
+                <iframe src="YourVideoURL" frameborder="0"></iframe>
+            </div>
+            <a href="YourVideoURL" class="button" target="_blank">Open File</a>
+        </div>
+    </div>
+
+</body>
 </html>
