@@ -62,7 +62,6 @@
         }
 
         /* Card container and card styling */
-       
         .card-container {
             display: flex;
             flex-wrap: wrap; /* Allows cards to wrap to the next line */
@@ -116,7 +115,7 @@
             background-color: #fff;
             border: 1px solid #ccc;
             border-radius: 8px;
-            width: 400px; /* Increased width of smaller card */
+            width: calc(50% - 5px); /* Increased width of smaller card to fit two per row */
             height: 300px; /* Increased height of smaller card */
             transition: transform 0.3s, z-index 0.3s; /* Smooth transition for scaling */
             overflow: hidden; /* Ensures the content doesn't overflow */
@@ -125,7 +124,7 @@
         }
 
         .inner-card:hover {
-            transform: scale(2); /* Enlarge on hover to cover most of the screen */
+            transform: scale(1.05); /* Slightly enlarge on hover */
             z-index: 10; /* Bring hovered card to the front */
         }
 
@@ -174,7 +173,6 @@
                 <div class="inner-card">
                     <div class="embed-container">
                         <iframe width="560" height="315" src="https://www.youtube.com/embed/MaMAVh7fbB8" frameborder="0" allowfullscreen></iframe>
-
                     </div>
                 </div>
             </div>
@@ -238,5 +236,3 @@
 
 </body>
 </html>
-
-
