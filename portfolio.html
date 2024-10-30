@@ -33,13 +33,12 @@
             display: inline-block;
         }
 
-       /* Hover effect for links */
-       .navbar .nav-links a:hover {
+        /* Hover effect for links */
+        .navbar .nav-links a:hover {
             background-color: #eed8ee; /* Light background on hover */
             color: rgb(112, 105, 112); /* Dark text on hover */
             text-decoration: underline; /* Adds underline on links on hover */
         }
-
 
         /* Basic page styling */
         body {
@@ -80,6 +79,12 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            transition: transform 0.3s; /* Smooth transition for scaling */
+        }
+
+        .card:hover {
+            transform: scale(1.05); /* Enlarge card on hover */
+            z-index: 10; /* Bring hovered card to the front */
         }
 
         .card h3 {
@@ -89,11 +94,16 @@
 
         .embed-container {
             width: 100%;
-            height: 300px;
+            height: 200px; /* Default height */
             margin-bottom: 10px;
             border: 1px solid #ccc;
             overflow: hidden;
             border-radius: 8px;
+            transition: height 0.3s; /* Smooth transition for height */
+        }
+
+        .embed-container:hover {
+            height: 300px; /* Increase height on hover */
         }
 
         .embed-container iframe {
@@ -139,7 +149,7 @@
         <div class="card">
             <h3>Buddy System App</h3>
             <div class="embed-container">
-                <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSy7y4-3a1F8VgezOK9DXB5VJkGIiFvrq7PXKjui01bzdDUHbbgR6izntymLm-FKmz9Rj6JcJz30yCq/embed?start=false&loop=false&delayms=3000" frameborder="0" width="1920" height="1109" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>" frameborder="0"></iframe>
+                <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSy7y4-3a1F8VgezOK9DXB5VJkGIiFvrq7PXKjui01bzdDUHbbgR6izntymLm-FKmz9Rj6JcJz30yCq/embed?start=false&loop=false&delayms=3000" frameborder="0" allowfullscreen="true"></iframe>
             </div>
             <a href="YourPowerPointURL1" class="button">Open File</a>
         </div>
@@ -148,7 +158,7 @@
         <div class="card">
             <h3>New York Airbnb Data</h3>
             <div class="embed-container">
-                <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQwymHBeDaie-RKM0XgqWjTyug8rmK2UiU-f4KFUUvLepqFG6zCOoChsD3gzv7Fqa5Hq8_N3--DAvvC/embed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>" frameborder="0"></iframe>
+                <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQwymHBeDaie-RKM0XgqWjTyug8rmK2UiU-f4KFUUvLepqFG6zCOoChsD3gzv7Fqa5Hq8_N3--DAvvC/embed?start=false&loop=false&delayms=3000" frameborder="0" allowfullscreen="true"></iframe>
             </div>
             <a href="YourPowerPointURL2" class="button">Open File</a>
         </div>
@@ -157,7 +167,7 @@
         <div class="card">
             <h3>PDF Document</h3>
             <div class="embed-container">
-                <iframe src="YourPDFURL" frameborder="0"></iframe>
+                <iframe src="YourPDFURL" frameborder="0" allowfullscreen="true"></iframe>
             </div>
             <a href="YourPDFURL" class="button">Open File</a>
         </div>
@@ -166,7 +176,7 @@
         <div class="card">
             <h3>Video File</h3>
             <div class="embed-container">
-                <iframe src="YourVideoURL" frameborder="0"></iframe>
+                <iframe src="YourVideoURL" frameborder="0" allowfullscreen="true"></iframe>
             </div>
             <a href="YourVideoURL" class="button">Open File</a>
         </div>
