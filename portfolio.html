@@ -45,11 +45,7 @@
             background-color: #faf8fa;
             margin: 0;
             font-family: 'Arial', sans-serif;
-            overflow-x: hidden; /* Prevent horizontal scrolling */
-            display: flex; /* Use flexbox for centering */
-            justify-content: center; /* Center horizontally */
-            align-items: center; /* Center vertically */
-            min-height: 100vh; /* Full height */
+            overflow: hidden; /* Prevents scrollbars when hovering over cards */
         }
 
         .content {
@@ -68,26 +64,24 @@
         /* Card container and card styling */
         .card-container {
             display: flex;
-            flex-direction: column; /* Stack cards vertically */
+            flex-wrap: wrap;
             gap: 20px;
             justify-content: center;
             padding: 20px;
-            max-width: 800px; /* Optional: Set a max-width for the container */
-            width: 100%; /* Full width */
+            position: relative; /* Allows inner cards to be positioned relative to this */
+            z-index: 1; /* Keeps the main card container below the hover effect */
         }
 
         .card {
             background-color: #f8f9fa;
             border: 1px solid #ddd;
             border-radius: 8px;
-            width: 100%; /* Full width */
+            width: calc(50% - 10px);
             padding: 20px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             display: flex;
             flex-direction: column;
             align-items: center;
-            position: relative; /* For positioning the hover effect */
-            overflow: hidden; /* Prevent overflow */
         }
 
         .card h3 {
@@ -95,51 +89,41 @@
             color: #333;
         }
 
-        /* Inner card styling */
+        /* New styles for the inner cards */
+        .inner-card-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px; /* Space between inner cards */
+        }
+
         .inner-card {
-            width: 100%; /* Full width of the card */
-            height: 150px; /* Set a height for inner cards */
+            background-color: #fff;
             border: 1px solid #ccc;
             border-radius: 8px;
-            margin-bottom: 10px;
-            transition: transform 0.3s ease; /* Smooth transition */
-            position: relative; /* For positioning */
-            overflow: hidden; /* Prevent overflow */
+            width: 400px; /* Increased width of smaller card */
+            height: 300px; /* Increased height of smaller card */
+            transition: transform 0.3s, z-index 0.3s; /* Smooth transition for scaling */
+            overflow: hidden; /* Ensures the content doesn't overflow */
+            position: relative; /* Allows z-index to work */
+            z-index: 1; /* Keeps smaller cards below hover effect */
         }
 
-        /* Hover effect for inner cards */
         .inner-card:hover {
-            transform: scale(1.05); /* Make it larger on hover */
-            z-index: 1; /* Bring to front */
+            transform: scale(2); /* Enlarge on hover to cover most of the screen */
+            z-index: 10; /* Bring hovered card to the front */
         }
 
-        /* Preview styling */
-        .preview {
-            width: 100%;
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: #f0f0f0; /* Light gray background for preview */
-        }
-
-        /* Embedded iframe styling */
         .embed-container {
             width: 100%;
             height: 100%;
-            border: none; /* No border for iframe */
-            display: none; /* Hide by default */
+            overflow: hidden;
+            border-radius: 8px;
         }
 
-        /* Show iframe when inner card is hovered */
-        .inner-card:hover .embed-container {
-            display: block; /* Show the iframe on hover */
-            position: absolute; /* Position it absolutely */
-            top: 0; /* Align to the top */
-            left: 0; /* Align to the left */
-            right: 0; /* Align to the right */
-            bottom: 0; /* Align to the bottom */
-            z-index: 2; /* Ensure it appears above */
+        .embed-container iframe {
+            width: 100%;
+            height: 100%;
         }
 
         .button {
@@ -150,6 +134,7 @@
             border-radius: 4px;
             font-size: 14px;
             text-align: center;
+            margin-top: 10px;
         }
 
         .button:hover {
@@ -179,12 +164,16 @@
         <!-- Card 1 -->
         <div class="card">
             <h3>Buddy System App</h3>
-            <div class="inner-card">
-                <div class="preview">
-                    <p>Preview of the Buddy System App Presentation</p>
+            <div class="inner-card-container">
+                <div class="inner-card">
+                    <div class="embed-container">
+                        <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSy7y4-3a1F8VgezOK9DXB5VJkGIiFvrq7PXKjui01bzdDUHbbgR6izntymLm-FKmz9Rj6JcJz30yCq/embed?start=false&loop=false&delayms=3000" frameborder="0" allowfullscreen="true"></iframe>
+                    </div>
                 </div>
-                <div class="embed-container">
-                    <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSy7y4-3a1F8VgezOK9DXB5VJkGIiFvrq7PXKjui01bzdDUHbbgR6izntymLm-FKmz9Rj6JcJz30yCq/pub?start=false&loop=false&delayms=3000" frameborder="0" allowfullscreen="true"></iframe>
+                <div class="inner-card">
+                    <div class="embed-container">
+                        <iframe src="YourPowerPointURL1" frameborder="0" allowfullscreen="true"></iframe>
+                    </div>
                 </div>
             </div>
             <a href="YourPowerPointURL1" class="button">Open File</a>
@@ -193,12 +182,16 @@
         <!-- Card 2 -->
         <div class="card">
             <h3>New York Airbnb Data</h3>
-            <div class="inner-card">
-                <div class="preview">
-                    <p>Preview of the New York Airbnb Data Presentation</p>
+            <div class="inner-card-container">
+                <div class="inner-card">
+                    <div class="embed-container">
+                        <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQwymHBeDaie-RKM0XgqWjTyug8rmK2UiU-f4KFUUvLepqFG6zCOoChsD3gzv7Fqa5Hq8_N3--DAvvC/embed?start=false&loop=false&delayms=3000" frameborder="0" allowfullscreen="true"></iframe>
+                    </div>
                 </div>
-                <div class="embed-container">
-                    <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQwymHBeDaie-RKM0XgqWjTyug8rmK2UiU-f4KFUUvLepqFG6zCOoChsD3gzv7Fqa5Hq8_N3--DAvvC/embed?start=false&loop=false&delayms=3000" frameborder="0" allowfullscreen="true"></iframe>
+                <div class="inner-card">
+                    <div class="embed-container">
+                        <iframe src="YourPowerPointURL2" frameborder="0" allowfullscreen="true"></iframe>
+                    </div>
                 </div>
             </div>
             <a href="YourPowerPointURL2" class="button">Open File</a>
@@ -207,12 +200,16 @@
         <!-- Card 3 -->
         <div class="card">
             <h3>PDF Document</h3>
-            <div class="inner-card">
-                <div class="preview">
-                    <p>Preview of the PDF Document</p>
+            <div class="inner-card-container">
+                <div class="inner-card">
+                    <div class="embed-container">
+                        <iframe src="YourPDFURL" frameborder="0" allowfullscreen="true"></iframe>
+                    </div>
                 </div>
-                <div class="embed-container">
-                    <iframe src="YourPDFURL" frameborder="0" allowfullscreen="true"></iframe>
+                <div class="inner-card">
+                    <div class="embed-container">
+                        <iframe src="YourPDFURL" frameborder="0" allowfullscreen="true"></iframe>
+                    </div>
                 </div>
             </div>
             <a href="YourPDFURL" class="button">Open File</a>
@@ -221,12 +218,16 @@
         <!-- Card 4 -->
         <div class="card">
             <h3>Video File</h3>
-            <div class="inner-card">
-                <div class="preview">
-                    <p>Preview of the Video File</p>
+            <div class="inner-card-container">
+                <div class="inner-card">
+                    <div class="embed-container">
+                        <iframe src="YourVideoURL" frameborder="0" allowfullscreen="true"></iframe>
+                    </div>
                 </div>
-                <div class="embed-container">
-                    <iframe src="YourVideoURL" frameborder="0" allowfullscreen="true"></iframe>
+                <div class="inner-card">
+                    <div class="embed-container">
+                        <iframe src="YourVideoURL" frameborder="0" allowfullscreen="true"></iframe>
+                    </div>
                 </div>
             </div>
             <a href="YourVideoURL" class="button">Open File</a>
@@ -235,3 +236,4 @@
 
 </body>
 </html>
+
