@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resume Portfolio</title>
     <style>
-        /* Style for the navigation bar */
         .navbar {
             background-color: #eed8ee;
             overflow: hidden;
@@ -13,7 +12,7 @@
             justify-content: space-between;
             align-items: center;
             padding: 10px 20px;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Adds shadow to bottom */
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
         }
 
         .navbar .name {
@@ -73,10 +72,18 @@
             text-align: center;
             cursor: pointer;
             transition: transform 0.2s;
+            overflow: hidden;
         }
 
         .card:hover {
             transform: scale(1.05);
+        }
+
+        .card img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 10px;
         }
 
         .card h3 {
@@ -115,18 +122,22 @@
 
     <div class="card-container">
         <a href="Campaign Project Proposal.pdf" target="_blank" class="card">
+            <img src="buddy_system_thumbnail.jpg" alt="Buddy System App">
             <h3>Buddy System App</h3>
             <p>Click to view project details.</p>
         </a>
         <a href="https://www.youtube.com/embed/MaMAVh7fbB8" target="_blank" class="card">
+            <img src="buddy_system_video_thumbnail.jpg" alt="Buddy System Video">
             <h3>Buddy System Video</h3>
             <p>Click to watch the video.</p>
         </a>
         <a href="IDS 3493 Final Project Paper - Team Athma.pdf" target="_blank" class="card">
+            <img src="asthma_buddy_thumbnail.jpg" alt="Asthma Buddy App">
             <h3>Asthma Buddy App</h3>
             <p>Click to view the project paper.</p>
         </a>
         <a href="https://docs.google.com/presentation/d/e/2PACX-1vQwymHBeDaie-RKM0XgqWjTyug8rmK2UiU-f4KFUUvLepqFG6zCOoChsD3gzv7Fqa5Hq8_N3--DAvvC/embed?start=false&loop=false&delayms=3000" target="_blank" class="card">
+            <img src="ny_airbnb_thumbnail.jpg" alt="New York Airbnb Data">
             <h3>New York Airbnb Data</h3>
             <p>Click to view the presentation.</p>
         </a>
