@@ -16,7 +16,6 @@
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Adds shadow to bottom */
         }
 
-        /* Style for the name on the left */
         .navbar .name {
             font-family: 'Playfair Display', serif;
             font-size: 24px;
@@ -24,7 +23,6 @@
             font-weight: bold;
         }
 
-        /* Style for the links on the right */
         .navbar .nav-links a {
             color: rgb(42, 40, 42);
             text-align: center;
@@ -33,19 +31,17 @@
             display: inline-block;
         }
 
-        /* Hover effect for links */
         .navbar .nav-links a:hover {
-            background-color: #eed8ee; /* Light background on hover */
-            color: rgb(112, 105, 112); /* Dark text on hover */
-            text-decoration: underline; /* Adds underline on links on hover */
+            background-color: #eed8ee;
+            color: rgb(112, 105, 112);
+            text-decoration: underline;
         }
 
-        /* Basic page styling */
         body {
             background-color: #faf8fa;
             margin: 0;
             font-family: 'Arial', sans-serif;
-            overflow: auto; /* Prevents scrollbars when hovering over cards */
+            overflow: auto;
         }
 
         .content {
@@ -61,91 +57,49 @@
             line-height: 1.2;
         }
 
-        /* Card container and card styling */
-       
         .card-container {
-            display: flex;
-            flex-wrap: wrap; /* Allows cards to wrap to the next line */
-            gap: 20px; /* Space between cards */
-            justify-content: center; /* Center align the cards */
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
             padding: 20px;
         }
 
         .card {
             background-color: #fff;
-            border: 1px solid #e0e0e0; /* Light border */
-            border-radius: 12px; /* More rounded corners */
+            border: 1px solid #e0e0e0;
+            border-radius: 12px;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            width: calc(50% - 10px); /* Set width to half minus gap */
             padding: 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            text-align: center;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
         }
 
         .card h3 {
             font-family: 'Roboto', sans-serif;
             font-size: 26px;
-            color: #444; /* White text color */
-            margin: 10px 0; /* Margin adjusted for balance */
-            background-color: #eed8ee; /* Match navbar background */
-            padding: 10px; /* Padding for the header */
-            border-radius: 8px; /* Rounded corners for header */
-            width: 100%;
+            color: #444;
+            margin: 10px 0;
+            background-color: #eed8ee;
+            padding: 10px;
+            border-radius: 8px;
             text-align: center;
         }
 
         .card p {
-            font-size: 18px; /* Increased font size */
-            color: #444; /* Darker text color for better contrast */
-            margin: 15px 0; /* Adjusted margin */
-            line-height: 1.6; /* Increased line height for better readability */
-            padding: 10px; /* Added padding around paragraphs */
-            text-align: left; /* Left-align text for better reading */
+            font-size: 18px;
+            color: #444;
+            margin: 15px 0;
+            line-height: 1.6;
         }
-
-        /* New styles for the inner cards */
-        .inner-card-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 10px; /* Space between inner cards */
-        }
-
-        .inner-card {
-            background-color: #fff;
-            border: 1px solid #ccc;
-            border-radius: 8px;
-            width: 400px; /* Increased width of smaller card */
-            height: 300px; /* Increased height of smaller card */
-            transition: transform 0.3s, z-index 0.3s; /* Smooth transition for scaling */
-            overflow: hidden; /* Ensures the content doesn't overflow */
-            position: relative; /* Allows z-index to work */
-            z-index: 1; /* Keeps smaller cards below hover effect */
-        }
-
-        .inner-card:hover {
-            transform: scale(2); /* Enlarge on hover to cover most of the screen */
-            z-index: 10; /* Bring hovered card to the front */
-        }
-
-        .embed-container {
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-            border-radius: 8px;
-        }
-
-        .embed-container iframe {
-            width: 100%;
-            height: 100%;
-        }
-
     </style>
 </head>
 <body>
 
-    <!-- Navigation Bar -->
     <div class="navbar">
         <div class="name">Sarah Maldonado</div>
         <div class="nav-links">
@@ -155,87 +109,30 @@
         </div>
     </div>
 
-    <!-- Content Section -->
     <div class="content">
         <h1>Portfolio</h1>
     </div>
 
-    <!-- Card Container with Embedded Files -->
     <div class="card-container">
-        <!-- Card 1 -->
-        <div class="card">
+        <a href="Campaign Project Proposal.pdf" target="_blank" class="card">
             <h3>Buddy System App</h3>
-            <div class="inner-card-container">
-                <div class="inner-card">
-                    <div class="embed-container">
-                        <iframe src="Campaign Project Proposal.pdf" frameborder="0" allowfullscreen="true"></iframe>
-                    </div>
-                </div>
-                <div class="inner-card">
-                    <div class="embed-container">
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/MaMAVh7fbB8" frameborder="0" allowfullscreen></iframe>
-
-                    </div>
-                </div>
-            </div>
-            <p>For this project, I designed an app and developed a social media campaign to demonstrate its potential for success. The campaign included creating prototypes of social media posts and writing reports on the app’s functionality and how social media could effectively promote it. One of the biggest challenges was generating an idea that felt personally relevant and meaningful, which required me to be both introspective and creative. This experience taught me how to navigate creative blocks and push forward to produce impactful content, even when inspiration was low.</p>
-        </div>
-
-        <!-- Card 2 -->
-        <div class="card">
+            <p>Click to view project details.</p>
+        </a>
+        <a href="https://www.youtube.com/embed/MaMAVh7fbB8" target="_blank" class="card">
+            <h3>Buddy System Video</h3>
+            <p>Click to watch the video.</p>
+        </a>
+        <a href="IDS 3493 Final Project Paper - Team Athma.pdf" target="_blank" class="card">
             <h3>Asthma Buddy App</h3>
-            <div class="inner-card-container">
-                <div class="inner-card">
-                    <div class="embed-container">
-                        <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSy7y4-3a1F8VgezOK9DXB5VJkGIiFvrq7PXKjui01bzdDUHbbgR6izntymLm-FKmz9Rj6JcJz30yCq/embed?start=false&loop=false&delayms=3000" frameborder="0" allowfullscreen="true"></iframe>
-                    </div>
-                </div>
-                <div class="inner-card">
-                    <div class="embed-container">
-                        <iframe src="IDS 3493 Final Project Paper - Team Athma.pdf" frameborder="0" allowfullscreen="true"></iframe>
-                    </div>
-                </div>
-            </div>
-            <p>For the Asthma Buddy app, my group and I had to work together to create prototypes for an app targeted towards children with asthma and their parents/guardians. My role in the group was designing and creating the prototypes as well as contributing the final report and powerpoint. Designing a health-focused app meant I had to be user-centered, making decisions based on what would make the app genuinely useful and accessible. It also improved my communication skills, as I gathered feedback and translated it into actionable changes. Additionally, this experience built my resilience, helping me work through creative challenges and prioritize functionality while keeping the design simple and intuitive. Overall, this project strengthened my user-focused thinking, communication, and problem-solving skills.</p>
-        </div>
-
-        <!-- Card 3 -->
-        <div class="card">
+            <p>Click to view the project paper.</p>
+        </a>
+        <a href="https://docs.google.com/presentation/d/e/2PACX-1vQwymHBeDaie-RKM0XgqWjTyug8rmK2UiU-f4KFUUvLepqFG6zCOoChsD3gzv7Fqa5Hq8_N3--DAvvC/embed?start=false&loop=false&delayms=3000" target="_blank" class="card">
             <h3>New York Airbnb Data</h3>
-            <div class="inner-card-container">
-                <div class="inner-card">
-                    <div class="embed-container">
-                        <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQwymHBeDaie-RKM0XgqWjTyug8rmK2UiU-f4KFUUvLepqFG6zCOoChsD3gzv7Fqa5Hq8_N3--DAvvC/embed?start=false&loop=false&delayms=3000" frameborder="0" allowfullscreen="true"></iframe>
-                    </div>
-                </div>
-                <div class="inner-card">
-                    <div class="embed-container">
-                        <iframe src="Final Report.pdf" frameborder="0" allowfullscreen="true"></iframe>
-                    </div>
-                </div>
-            </div>
-            <p>This project analyzes Airbnb listings in New York, providing insights on pricing and availability.</p>
-        </div>
-
-        <!-- Card 4 -->
-        <div class="card">
-            <h3>Professional Image on Social Media Research Paper</h3>
-            <div class="inner-card-container">
-                <div class="inner-card">
-                    <div class="embed-container">
-                        <iframe src="social_media_image.pdf" frameborder="0" allowfullscreen="true"></iframe>
-                    </div>
-                </div>
-                <div class="inner-card">
-                    <div class="embed-container">
-                        <iframe src="LIS4022 Formal Proposal Final Doc.pdf" frameborder="0" allowfullscreen="true"></iframe>
-                    </div>
-                </div>
-            </div>
-            <p>This research paper discusses the impact of social media on professional image and how to manage it effectively.</p>
-        </div>
+            <p>Click to view the presentation.</p>
+        </a>
     </div>
 
 </body>
 </html>
+
 
