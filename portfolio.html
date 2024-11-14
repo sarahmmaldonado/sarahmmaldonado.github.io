@@ -81,7 +81,8 @@
 
         .card img {
             width: 100%;
-            height: auto;
+            max-height: 150px; /* Ensures the images don't make the card taller */
+            object-fit: cover; /* Keeps the image within the boundaries */
             border-radius: 8px;
             margin-bottom: 10px;
         }
