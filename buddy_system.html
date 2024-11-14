@@ -55,55 +55,41 @@
             line-height: 1.2;
         }
 
-        .card-container {
-            display: flex;
-            justify-content: center; /* Centers the card horizontally */
-            align-items: center; /* Centers the card vertically if the container height allows */
-            padding: 20px;
-            max-width: 800px; /* Adjust as needed */
-            margin: 0 auto; /* Centers the container */
-        }
-
-        .card {
-            width: 100%; /* Ensures the card takes the full width */
-            max-width: 600px; /* Sets a max width */
-            background-color: #fff;
-            border: 1px solid #e0e0e0;
-            border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            text-align: center;
-            overflow: hidden;
-        }
-
-        .card iframe {
-            width: 100%;
-            height: 300px;
-            border-radius: 8px;
-            margin-bottom: 10px;
-            transition: transform 0.2s ease-in-out; /* Adds a transition for smooth scaling */
-        }
-
-        .card iframe:hover {
-            transform: scale(1.1); /* Scales the iframe on hover */
-            z-index: 1; /* Ensures the iframe appears above other elements */
-        }
-
-        .card h3 {
+        h3 {
             font-family: 'Roboto', sans-serif;
             font-size: 26px;
             color: #444;
-            margin: 10px 0;
+            margin: 20px 0 10px;
             background-color: #eed8ee;
             padding: 10px;
             border-radius: 8px;
+            text-align: center;
         }
 
-        .card p {
+        p {
             font-size: 18px;
             color: #444;
             margin: 15px 0;
             line-height: 1.6;
+        }
+
+        iframe {
+            width: 100%;
+            height: 300px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            transition: transform 0.2s ease-in-out;
+        }
+
+        iframe:hover {
+            transform: scale(1.1);
+            z-index: 1;
+        }
+
+        .article-section {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
         }
     </style>
 </head>
@@ -122,17 +108,14 @@
         <h1>Portfolio</h1>
     </div>
 
-    <div class="card-container">
-        <!-- Card with PDF, video, and description -->
-        <div class="card">
-            <h3>Project with PDF and Video</h3>
-            <!-- Embed PDF -->
-            <iframe src="Campaign Project Proposal.pdf" frameborder="0"></iframe>
-            <!-- Embed Video -->
-            <iframe src="https://www.youtube.com/embed/MaMAVh7fbB8" frameborder="0" allowfullscreen></iframe>
-            <!-- Description -->
-            <p>This project involved integrating a PDF and a video to showcase a comprehensive overview. Click on the PDF or video for more details.</p>
-        </div>
+    <div class="article-section">
+        <h3>Project with PDF and Video</h3>
+        <!-- Embed PDF -->
+        <iframe src="Campaign Project Proposal.pdf" frameborder="0"></iframe>
+        <!-- Embed Video -->
+        <iframe src="https://www.youtube.com/embed/MaMAVh7fbB8" frameborder="0" allowfullscreen></iframe>
+        <!-- Description -->
+        <p>This project involved integrating a PDF and a video to showcase a comprehensive overview. Click on the PDF or video for more details.</p>
     </div>
 
 </body>
