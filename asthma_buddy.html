@@ -40,7 +40,6 @@
             background-color: #faf8fa;
             margin: 0;
             font-family: 'Arial', sans-serif;
-            font-size: 18px;
         }
 
         .content {
@@ -68,6 +67,7 @@
         }
 
         p {
+            font-size: 18px;
             color: #444;
             margin: 15px 0;
             line-height: 1.6;
@@ -88,46 +88,53 @@
 
         .main-container {
             display: flex;
-            flex-direction: column;
-            max-width: 800px;
+            flex-wrap: nowrap;
+            max-width: 1200px;
             margin: 20px auto;
             padding: 20px;
-            align-items: center;
         }
 
-        .skills {
+        .outcomes {
+            flex: 0 0 250px;
             background-color: #eed8ee;
             padding: 15px;
             border-radius: 8px;
-            margin-bottom: 20px;
+            margin-right: 20px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            font-size: 20px;
-            text-align: left;
-            width: 100%;
+            max-height: 250px;
+            overflow-y: auto;
+            font-size: 20px; /* Outcomes font size */
         }
 
-        .skills h2 {
+        .outcomes h2 {
             font-size: 20px;
             margin-bottom: 10px;
         }
 
-        .skills ul {
+        .outcomes ul {
             list-style-type: disc;
             padding-left: 20px;
         }
 
-        .skills ul li {
+        .outcomes ul li {
             margin-bottom: 8px;
         }
 
+        .article-section {
+            flex: 1;
+            max-width: 800px;
+        }
+
+        .article-section p {
+            font-size: 18px;
+        }
+    
         .pink-box {
             background-color: #eed8ee;
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             margin: 20px 0;
-            width: 100%;
-            max-width: 600px;
         }
 
         .pink-box p {
@@ -154,29 +161,30 @@
     </div>
 
     <div class="main-container">
-        <!-- Skills Section -->
-        <div class="skills">
+        <!-- Outcomes Box -->
+        <div class="outcomes">
             <h2>Skills</h2>
             <ul>
-                <li>User-Centered Design</li>
-                <li>Effective Communication</li>
-                <li>Feedback Integration</li>
-                <li>Problem-Solving</li>
+                <li>UX Design</li>
+                <li>Prioritization and desicion-making</li>
+                <li>Effective communication</li>
+                <li>Ability to be receptive to feedback</li>
             </ul>
-        </div>
+        </div>  
 
-        <!-- Project Section -->
-        <h3>Asthma Buddy App</h3>
-        <!-- Embed PDF -->
-        <iframe src="IDS 3493 Final Project Paper - Team Athma.pdf" frameborder="0"></iframe>
-        <!-- Embed Presentation -->
-        <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSy7y4-3a1F8VgezOK9DXB5VJkGIiFvrq7PXKjui01bzdDUHbbgR6izntymLm-FKmz9Rj6JcJz30yCq/embed?start=false&loop=false&delayms=3000" frameborder="0" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
-        <!-- Description -->
-        <div class="pink-box">
-            <p>For the Asthma Buddy app, my group and I had to work together to create prototypes for an app targeted towards children with asthma and their parents/guardians. My role in the group was designing and creating the prototypes as well as contributing the final report and PowerPoint. <br>Designing a health-focused app meant I had to be user-centered, making decisions based on what would make the app genuinely useful and accessible. It also improved my communication skills, as I gathered feedback and translated it into actionable changes. Additionally, this experience built my resilience, helping me work through creative challenges and prioritize functionality while keeping the design simple and intuitive. Overall, this project strengthened my user-focused thinking, communication, and problem-solving skills.</br></p>
+        <!-- Main Content -->
+        <div class="article-section">
+            <h3>Asthma Buddy App</h3>
+            <!-- Embed PDF -->
+            <iframe src="IDS 3493 Final Project Paper - Team Athma.pdf" frameborder="0"></iframe>
+            <!-- Embed Video -->
+            <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSy7y4-3a1F8VgezOK9DXB5VJkGIiFvrq7PXKjui01bzdDUHbbgR6izntymLm-FKmz9Rj6JcJz30yCq/embed?start=false&loop=false&delayms=3000" frameborder="0" width="1920" height="1109" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+            <!-- Description -->
+             <div class="pink-box">
+                <p>For the Asthma Buddy app, my group and I had to work together to create prototypes for an app targeted towards children with asthma and their parents/guardians. My role in the group was designing and creating the prototypes as well as contributing the final report and powerpoint. <br>Designing a health-focused app meant I had to be user-centered, making decisions based on what would make the app genuinely useful and accessible. It also improved my communication skills, as I gathered feedback and translated it into actionable changes. Additionally, this experience built my resilience, helping me work through creative challenges and prioritize functionality while keeping the design simple and intuitive. Overall, this project strengthened my user-focused thinking, communication, and problem-solving skills.</br></p>
         </div>
     </div>
+</div>
 
 </body>
 </html>
-
