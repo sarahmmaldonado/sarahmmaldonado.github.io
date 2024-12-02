@@ -73,10 +73,15 @@
             cursor: pointer;
             transition: transform 0.2s;
             overflow: hidden;
+            text-decoration: none; /* Remove underline by default */
+            display: block; /* Makes the anchor tag a block element */
+            width: 100%; /* Ensures it takes up the full width */
         }
 
         .card:hover {
             transform: scale(1.05);
+            text-decoration: underline; /* Add underline on hover */
+            text-decoration-color: #eed8ee; /* Match navbar hover color */
         }
 
         .card img {
