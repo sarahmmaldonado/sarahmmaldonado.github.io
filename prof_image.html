@@ -66,13 +66,6 @@
             text-align: center;
         }
 
-        p {
-            font-size: 18px;
-            color: #444;
-            margin: 15px 0;
-            line-height: 1.6;
-        }
-
         iframe {
             width: 100%;
             height: 300px;
@@ -86,68 +79,13 @@
             z-index: 1;
         }
 
-        .article-section {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
         .main-container {
             display: flex;
-            flex-direction: row;
-            max-width: 1200px;
-            margin: 0 auto;
+            flex-direction: column;
+            align-items: center;
+            max-width: 800px;
+            margin: 20px auto;
             padding: 20px;
-        }
-
-        .outcomes {
-            flex: 0 0 250px;
-            background-color: #eed8ee;
-            padding: 15px;
-            border-radius: 8px;
-            margin-right: 20px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            max-height: 250px;
-            overflow-y: auto;
-        }
-
-        .outcomes h2 {
-            font-family: 'Roboto', sans-serif;
-            font-size: 20px;
-            color: #333;
-            margin-bottom: 10px;
-        }
-
-        .outcomes ul {
-            list-style-type: disc;
-            padding-left: 20px;
-        }
-
-        .outcomes ul li {
-            font-size: 18px;
-            color: #444;
-            margin-bottom: 8px;
-        }
-
-        .content-area {
-            flex: 1;
-        }
-
-        .content-area h3 {
-            font-size: 18px;
-            margin-bottom: 10px;
-        }
-
-        .content-area iframe {
-            width: 100%;
-            height: 300px;
-            border-radius: 8px;
-            margin-bottom: 15px;
-        }
-
-        .content-area p {
-            font-size: 20px;
-            line-height: 1.6;
         }
 
         .pink-box {
@@ -156,6 +94,26 @@
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             margin: 20px 0;
+            text-align: left;
+            width: 100%;
+        }
+
+        .pink-box h2 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: #444;
+        }
+
+        .pink-box ul {
+            list-style-type: disc;
+            padding-left: 20px;
+            margin-bottom: 20px;
+        }
+
+        .pink-box ul li {
+            margin-bottom: 8px;
+            font-size: 18px;
+            color: #444;
         }
 
         .pink-box p {
@@ -182,34 +140,29 @@
     </div>
 
     <div class="main-container">
-        <!-- Outcomes Box -->
-        <div class="outcomes">
-            <h2>Outcomes</h2>
-            <ul>
-                <li>Improved research skills</li>
-                <li>Enhanced collaboration and teamwork</li>
-                <li>Leadership and time management</li>
-            </ul>
-        </div>
+        <!-- Main Content -->
+        <div class="article-section">
+            <h3>Professional Image on Social Media Research Paper</h3>
+            <!-- Embed PDF -->
+            <iframe src="LIS4022 Formal Proposal Final Doc.pdf" frameborder="0" title="Social Media Research Paper"></iframe>
+            <!-- Embed PDF -->
+            <iframe src="Final Project LIS4022.pdf" frameborder="0" title="LIS4022 Project"></iframe>
 
-        <!-- Main Content Area -->
-        <div class="content-area">
-            <div class="article-section">
-                <h3>Professional Image on Social Media Research Paper</h3>
-                <!-- Embed PDF -->
-                <iframe src="LIS4022 Formal Proposal Final Doc.pdf" frameborder="0"></iframe>
-                <!-- Embed Video -->
-                <iframe src="Final Project LIS4022.pdf" frameborder="0"></iframe> 
-
-                <!-- Pink Box with Text -->
-                <div class="pink-box">
-                    <p>For this project, my team and I divided the paper into three sections, each focusing on one social media platform and how to curate a professional image on it. Each team member took responsibility for researching and analyzing a different platform, allowing us to explore the unique characteristics and best practices for building a professional online presence on LinkedIn, Instagram, and TikTok. My role involved examining TikTok, and I analyzed how users can optimize their profiles, content, and engagement strategies to maintain a consistent and professional image.</p>
-                    <p>Through this project, I learned how different social media platforms require tailored approaches to personal branding. I also developed skills in researching and synthesizing information, as well as presenting clear recommendations on how professionals can effectively manage their online image. Additionally, working collaboratively with my team helped me improve my project management skills, as we coordinated our efforts and ensured that all the sections aligned with the overall goal. This project deepened my understanding of the growing importance of social media in career development and the strategies needed to navigate it successfully.</p>
-                </div>
+            <!-- Pink Box with Outcomes and Paragraph -->
+            <div class="pink-box">
+                <h2>Outcomes</h2>
+                <ul>
+                    <li>Improved research skills</li>
+                    <li>Enhanced collaboration and teamwork</li>
+                    <li>Leadership and time management</li>
+                </ul>
+                <p>For this project, my team and I divided the paper into three sections, each focusing on one social media platform and how to curate a professional image on it. Each team member took responsibility for researching and analyzing a different platform, allowing us to explore the unique characteristics and best practices for building a professional online presence on LinkedIn, Instagram, and TikTok. My role involved examining TikTok, and I analyzed how users can optimize their profiles, content, and engagement strategies to maintain a consistent and professional image.</p>
+                <p>Through this project, I learned how different social media platforms require tailored approaches to personal branding. I also developed skills in researching and synthesizing information, as well as presenting clear recommendations on how professionals can effectively manage their online image. Additionally, working collaboratively with my team helped me improve my project management skills, as we coordinated our efforts and ensured that all the sections aligned with the overall goal. This project deepened my understanding of the growing importance of social media in career development and the strategies needed to navigate it successfully.</p>
             </div>
         </div>
     </div>
 
 </body>
 </html>
+
 
