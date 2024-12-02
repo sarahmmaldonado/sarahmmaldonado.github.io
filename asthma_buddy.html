@@ -40,6 +40,7 @@
             background-color: #faf8fa;
             margin: 0;
             font-family: 'Arial', sans-serif;
+            font-size: 18px;
         }
 
         .content {
@@ -66,13 +67,6 @@
             text-align: center;
         }
 
-        p {
-            font-size: 18px;
-            color: #444;
-            margin: 15px 0;
-            line-height: 1.6;
-        }
-
         iframe {
             width: 100%;
             height: 300px;
@@ -88,53 +82,39 @@
 
         .main-container {
             display: flex;
-            flex-wrap: nowrap;
-            max-width: 1200px;
+            flex-direction: column;
+            align-items: center;
+            max-width: 800px;
             margin: 20px auto;
             padding: 20px;
         }
 
-        .outcomes {
-            flex: 0 0 250px;
-            background-color: #eed8ee;
-            padding: 15px;
-            border-radius: 8px;
-            margin-right: 20px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            max-height: 250px;
-            overflow-y: auto;
-            font-size: 20px; /* Outcomes font size */
-        }
-
-        .outcomes h2 {
-            font-size: 20px;
-            margin-bottom: 10px;
-        }
-
-        .outcomes ul {
-            list-style-type: disc;
-            padding-left: 20px;
-        }
-
-        .outcomes ul li {
-            margin-bottom: 8px;
-        }
-
-        .article-section {
-            flex: 1;
-            max-width: 800px;
-        }
-
-        .article-section p {
-            font-size: 18px;
-        }
-    
         .pink-box {
             background-color: #eed8ee;
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             margin: 20px 0;
+            text-align: left;
+            width: 100%;
+        }
+
+        .pink-box h2 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: #444;
+        }
+
+        .pink-box ul {
+            list-style-type: disc;
+            padding-left: 20px;
+            margin-bottom: 20px;
+        }
+
+        .pink-box ul li {
+            margin-bottom: 8px;
+            font-size: 18px;
+            color: #444;
         }
 
         .pink-box p {
@@ -161,30 +141,26 @@
     </div>
 
     <div class="main-container">
-        <!-- Outcomes Box -->
-        <div class="outcomes">
-            <h2>Skills</h2>
-            <ul>
-                <li>UX Design</li>
-                <li>Prioritization and desicion-making</li>
-                <li>Effective communication</li>
-                <li>Ability to be receptive to feedback</li>
-            </ul>
-        </div>  
-
         <!-- Main Content -->
         <div class="article-section">
             <h3>Asthma Buddy App</h3>
             <!-- Embed PDF -->
-            <iframe src="IDS 3493 Final Project Paper - Team Athma.pdf" frameborder="0"></iframe>
+            <iframe src="IDS 3493 Final Project Paper - Team Athma.pdf" frameborder="0" title="Asthma Buddy Project"></iframe>
             <!-- Embed Video -->
-            <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSy7y4-3a1F8VgezOK9DXB5VJkGIiFvrq7PXKjui01bzdDUHbbgR6izntymLm-FKmz9Rj6JcJz30yCq/embed?start=false&loop=false&delayms=3000" frameborder="0" width="1920" height="1109" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
-            <!-- Description -->
-             <div class="pink-box">
-                <p>For the Asthma Buddy app, my group and I had to work together to create prototypes for an app targeted towards children with asthma and their parents/guardians. My role in the group was designing and creating the prototypes as well as contributing the final report and powerpoint. <br>Designing a health-focused app meant I had to be user-centered, making decisions based on what would make the app genuinely useful and accessible. It also improved my communication skills, as I gathered feedback and translated it into actionable changes. Additionally, this experience built my resilience, helping me work through creative challenges and prioritize functionality while keeping the design simple and intuitive. Overall, this project strengthened my user-focused thinking, communication, and problem-solving skills.</br></p>
+            <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSy7y4-3a1F8VgezOK9DXB5VJkGIiFvrq7PXKjui01bzdDUHbbgR6izntymLm-FKmz9Rj6JcJz30yCq/embed?start=false&loop=false&delayms=3000" frameborder="0" title="Asthma Buddy Presentation" allowfullscreen></iframe>
+
+            <!-- Pink Box with Outcomes and Paragraph -->
+            <div class="pink-box">
+                <h2>Outcomes</h2>
+                <ul>
+                    <li>Strengthened User-Centered Design Skills</li>
+                    <li>Improved Communication and Feedback Integration</li>
+                    <li>Enhanced Problem-Solving and Resilience</li>
+                </ul>
+                <p>For the Asthma Buddy app, my group and I created prototypes targeted toward children with asthma and their parents/guardians. My role involved designing the prototypes and contributing to the final report and presentation. Working on a health-focused app challenged me to prioritize functionality and simplicity while keeping the design accessible. The experience improved my ability to incorporate feedback, strengthened my problem-solving skills, and solidified my user-centered approach to design.</p>
+            </div>
         </div>
     </div>
-</div>
 
 </body>
 </html>
