@@ -99,12 +99,13 @@
             font-size: 26px;
             color: #444;
             margin: 10px 0;
-            background-color: #eed8ee; /* Pink bar background */
+            background-color: #eed8ee; /* Pink background for the title */
             padding: 10px;
             border-radius: 8px;
             text-align: center;
-            display: block; /* Make it a block element to stretch the width */
-            width: 100%; /* Ensure it stretches across the full width */
+            width: 100%; /* Ensure the pink box stretches across the full width */
+            box-sizing: border-box; /* Prevent padding from affecting width */
+            display: inline-block; /* Remove block-level element behavior */
         }
 
         
