@@ -75,7 +75,9 @@
             overflow: hidden;
             text-decoration: none; /* Remove underline by default */
             display: block; /* Makes the anchor tag a block element */
-            
+            width: 100%; /* Ensure the pink box stretches across the whole container */
+            box-sizing: border-box; /* Makes sure padding doesn't affect the width */
+
         }
 
         .card:hover {
