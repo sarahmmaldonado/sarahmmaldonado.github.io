@@ -92,13 +92,14 @@
             font-size: 26px;
             color: #444;
             margin: 10px 0;
-            background-color: #eed8ee; /* Matches the navbar hover background color */
+            background-color: #eed8ee; /* Pink bar background */
             padding: 10px;
             border-radius: 8px;
             text-align: center;
-            position: relative;
-            display: inline-block;
+            display: block; /* Make it a block element to stretch the width */
+            width: 100%; /* Ensure it stretches across the full width */
         }
+
         
         .card h3::after {
             content: '';
