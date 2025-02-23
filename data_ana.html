@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Analytics Projects</title>
+    <style>
+        .navbar {
+            background-color: #eed8ee;
+            overflow: hidden;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar .name {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            color: rgb(42, 40, 42);
+            font-weight: bold;
+        }
+        
+        .navbar .nav-links a {
+            color: rgb(42, 40, 42);
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none !important; /* Ensure no underline by default */
+            display: inline-block;
+        }
+
+        .navbar .nav-links a:hover {
+            background-color: #eed8ee;
+            color: rgb(112, 105, 112);
+            text-decoration: underline !important; /* Add underline only on hover */
+        }
+
+        body {
+            background-color: #faf8fa;
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            overflow: auto;
+        }
+
+        .content {
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            font-family: 'Roboto', sans-serif;
+            font-size: 48px;
+            color: #333;
+            font-weight: bold;
+            line-height: 1.2;
+        }
+
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .card {
+            background-color: #fff;
+            border: 1px solid #e0e0e0;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+            cursor: pointer;
+            transition: transform 0.2s;
+            overflow: hidden;
+            text-decoration: none; /* Remove underline by default */
+            display: block; /* Makes the anchor tag a block element */
+            width: 100%; /* Ensure the pink box stretches across the whole container */
+            box-sizing: border-box; /* Makes sure padding doesn't affect the width */
+
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            text-decoration: underline; /* Add underline on hover */
+            text-decoration-color: #eed8ee; /* Match navbar hover color */
+        }
+
+        .card img {
+            width: 100%;
+            max-height: 150px; /* Ensures the images don't make the card taller */
+            object-fit: cover; /* Keeps the image within the boundaries */
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        .card h3 {
+            font-family: 'Roboto', sans-serif;
+            font-size: 26px;
+            color: #444;
+            margin: 10px 0;
+            background-color: #eed8ee; /* Pink background for the title */
+            padding: 10px;
+            border-radius: 8px;
+            text-align: center;
+            width: 100%; /* Ensure the pink box stretches across the full width */
+            box-sizing: border-box; /* Prevent padding from affecting width */
+            display: inline-block; /* Remove block-level element behavior */
+        }
+
+        
+        .card h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: #eed8ee; /* Color of the underline on hover */
+            transform: scaleX(0); /* Initially, the underline is hidden */
+            transition: transform 0.3s ease;
+        }
+
+        .card p {
+            font-size: 18px;
+            color: #444;
+            margin: 15px 0;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="navbar">
+        <div class="name">Sarah Maldonado</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="experience.html">Experience</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="resume.html">Resume</a>
+        </div>
+    </div>
+
+    <div class="content">
+        <h1>Data Analytics Projects</h1>
+    </div>
+
+    <div class="card-container">
+        <a href="new_york_airbnb.html" target="_blank" class="card">
+            <img src="Screenshot 2024-11-14 at 4.48.17 PM.png" alt="Asthma Buddy App">
+            <h3>New York Airbnb Data</h3>
+        </a>
+    
+    </div>
+
+</body>
+</html>
