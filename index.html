@@ -190,18 +190,8 @@
         }
 
         /* Content container for image and text box */
-        .content {
-            display: flex;
-            flex-direction: column; /* Stack name on top, image and text box below */
-            align-items: flex-start; /* Left align content */
-            margin-top: 50px; /* Adds space below the name */
-            padding: 50px 30px; /* Padding around the content */
-        }
-
-        /* Content container for image and text box */
         .content-inner {
             display: flex; /* Align image and text box horizontally */
-            align-items: center; /* Vertically align image and text */
             justify-content: flex-start; /* Align everything to the left */
             width: 100%; /* Full width */
         }
@@ -236,9 +226,10 @@
 
     <div class="wrapper">
         <div class="content">
-            <!-- Your name will go here above the card -->
-            <h1 class="name">Sarah Maldonado</h1> 
-            
+            <!-- Container for name and card -->
+            <div class="name-container">
+                <h1 class="name">Sarah Maldonado</h1>
+            </div>
             <!-- Container for image and text box -->
             <div class="content-inner">
                 <img src="Resume/Screenshot 2025-04-23 at 12.23.59 PM.png" alt="Sarah Maldonado">
@@ -264,8 +255,6 @@
             <a href="mailto:sarahmaldonado2003@gmail.com">Email: sarahmaldonado2003@gmail.com</a>
         </div>
     </div>
-
-    
 
     <script>
         // JavaScript for dropdown
