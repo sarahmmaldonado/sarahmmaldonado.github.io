@@ -167,6 +167,29 @@
         .wrapper {
             padding-bottom: 80px; /* Space at the bottom for the Contact bar */
         }
+
+        /* Style for the name above the box */
+        .name-container {
+            text-align: center; /* Center the name */
+            margin-top: 50px; /* Adds space between top and name */
+        }
+
+        /* Style for the name */
+        .name {
+            font-family: 'Playfair Display', serif; /* Font style for the name */
+            font-size: 48px; /* Larger font size */
+            color: #333; /* Default color */
+            font-weight: bold; /* Bold text */
+            text-transform: uppercase; /* Make the name all uppercase */
+            transition: color 0.3s ease, text-shadow 0.3s ease; /* Smooth transition for hover effect */
+        }
+
+        /* Hover effect for the name */
+        .name:hover {
+            color: #e91e63; /* Pink color */
+            text-shadow: 0 0 15px #e91e63, 0 0 30px #e91e63; /* Pink glow effect */
+        }
+
     </style>
 </head>
 <body>
@@ -202,6 +225,11 @@
             <a href="mailto:sarahmaldonado2003@gmail.com">Email: sarahmaldonado2003@gmail.com</a>
         </div>
     </div>
+
+    <div class="name-container">
+        <h1 class="name">Sarah Maldonado</h1>
+    </div>
+    
 
     <script>
         // JavaScript for dropdown
