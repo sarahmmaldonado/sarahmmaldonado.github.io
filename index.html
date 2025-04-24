@@ -56,8 +56,9 @@
         /* Content container to align image and text horizontally */
         .content {
             display: flex; /* Align image and text horizontally */
-            align-items: center; /* Vertically align image and text */
-            margin-top: 40px; /* Reduced margin to move content higher */
+            flex-direction: column; /* Stack name on top, image and text box below */
+            align-items: flex-start; /* Left align content */
+            margin-top: 50px; /* Adds space below the navbar */
             padding: 50px 30px; /* Padding around the content */
         }
 
@@ -169,16 +170,16 @@
 
         /* Style for the name above the box */
         .name-container {
-            text-align: center; /* Center the name */
-            margin-top: 30px; /* Reduced margin to move name higher */
+            text-align: left; /* Left-align the name */
+            margin-top: 50px; /* Adds space between top and name */
         }
 
         /* Style for the name above the text box */
         .name {
             font-family: 'Playfair Display', serif; /* Font style for the name */
-            font-size: 60px; /* Large font size */
+            font-size: 80px; /* Larger font size */
             color: #333; /* Default color */
-            text-align: center; /* Center the name above the content */
+            text-align: left; /* Left align the name */
             margin-bottom: 20px; /* Space between the name and the content */
             transition: text-shadow 0.3s ease; /* Smooth transition for hover effect */
         }
@@ -192,8 +193,8 @@
         .content {
             display: flex;
             flex-direction: column; /* Stack name on top, image and text box below */
-            align-items: center; /* Center content horizontally */
-            margin-top: 30px; /* Reduced space to bring the content up */
+            align-items: flex-start; /* Left align content */
+            margin-top: 50px; /* Adds space below the name */
             padding: 50px 30px; /* Padding around the content */
         }
 
@@ -263,6 +264,8 @@
             <a href="mailto:sarahmaldonado2003@gmail.com">Email: sarahmaldonado2003@gmail.com</a>
         </div>
     </div>
+
+    
 
     <script>
         // JavaScript for dropdown
