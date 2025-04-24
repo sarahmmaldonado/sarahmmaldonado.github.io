@@ -57,7 +57,7 @@
         .content {
             display: flex; /* Align image and text horizontally */
             align-items: center; /* Vertically align image and text */
-            margin-top: 100px; /* Adds space below the navbar */
+            margin-top: 40px; /* Reduced margin to move content higher */
             padding: 50px 30px; /* Padding around the content */
         }
 
@@ -68,7 +68,6 @@
             margin-right: 100px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
         }
-
 
         /* Text container for proper alignment */
         .text-container {
@@ -171,7 +170,7 @@
         /* Style for the name above the box */
         .name-container {
             text-align: center; /* Center the name */
-            margin-top: 50px; /* Adds space between top and name */
+            margin-top: 30px; /* Reduced margin to move name higher */
         }
 
         /* Style for the name above the text box */
@@ -194,7 +193,7 @@
             display: flex;
             flex-direction: column; /* Stack name on top, image and text box below */
             align-items: center; /* Center content horizontally */
-            margin-top: 50px; /* Adds space below the name */
+            margin-top: 30px; /* Reduced space to bring the content up */
             padding: 50px 30px; /* Padding around the content */
         }
 
@@ -221,25 +220,6 @@
             align-items: flex-start;
             width: 70%; /* Set a width for the text box */
         }
-
-
-        /* Card style */
-        .card {
-            background-color: #ffffff;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease;
-            margin-bottom: 30px;
-        }
-
-        /* Card hover effect */
-        .card:hover {
-            transform: scale(1.05);
-            box-shadow: 0 20px 40px rgba(237, 216, 238, 1);
-        }
-
-
     </style>
 </head>
 <body>
@@ -284,8 +264,6 @@
         </div>
     </div>
 
-    
-
     <script>
         // JavaScript for dropdown
         const dropdownButton = document.querySelector('.dropdown-button');
@@ -304,7 +282,3 @@
     </script>
 </body>
 </html>
-
-
-
-
